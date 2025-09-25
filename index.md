@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/assets/style.css">
 
 <div class="hero">
-  <img src="headshot.jpg" alt="Filip Janev headshot">
+  <img src="headshot.jpg" alt="Filip Janev headshot" class="headshot">
   <div>
     <h1>Filip Janev</h1>
     <div class="sub"><strong>Creative Editor & Junior Media Buyer</strong> — I create, polish, and launch content that performs.</div>
     <div class="btns">
-      <a class="btn" href="mailto:your@email.com">Email me</a>
+      <a class="btn" href="mailto:fjanev996@gmail.com">Email me</a>
       <a class="btn" href="https://www.upwork.com/freelancers/~016c8e482f2485cc4b" target="_blank">Upwork</a>
       <a class="btn" href="https://www.linkedin.com/in/filip-janev-458402169/" target="_blank">LinkedIn</a>
     </div>
