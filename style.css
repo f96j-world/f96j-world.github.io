@@ -3,6 +3,17 @@
 body { max-width: var(--maxw); margin: 0 auto; padding: 24px; line-height: 1.6; }
 img { max-width: 100%; height: auto; }
 
+/* Ensure headshot never grows too large */
+img.headshot {
+  width: 160px;   /* adjust size: 120px–200px is typical */
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 16px auto; /* centers it */
+}
+
+
 /* Hero */
 .hero { display: grid; grid-template-columns: 112px 1fr; gap: 20px; align-items: center; margin: 24px 0 8px; }
 .hero img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; }
