@@ -1,1 +1,19 @@
+/* General tweaks */
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Headshot styling */
+img.headshot {
+  width: 160px;        /* you can change to 140px or 180px if you want */
+  height: 160px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* keeps proportions */
+  display: block;
+  margin: 0 auto 16px auto; /* center horizontally */
+}
 
