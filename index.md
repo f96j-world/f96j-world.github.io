@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/assets/style.css">
 
 <div class="hero">
-  <img src="headshot.jpg" alt="Filip Janev headshot" class="headshot">
+  <img src="assets/headshot.jpg" alt="Filip Janev headshot" class="headshot">
   <div>
     <h1>Filip Janev</h1>
     <div class="sub"><strong>Creative Editor & Junior Media Buyer</strong> — I create, polish, and launch content that performs.</div>
