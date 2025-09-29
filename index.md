@@ -34,7 +34,7 @@
       <source src="/assets/yt-intro.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>YouTube Intro </h3>
+  <h3>YouTube Intro (Sunny-style)</h3>
   <p class="meta">Motion graphics, pacing, audio cleanup.</p>
 </div>
 
@@ -60,7 +60,7 @@
   <p class="meta">Narrative structure, B-roll integration, transitions.</p>
 </div>
 
-<!-- 5 -->
+<!-- 4 -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" poster="/assets/posters/main1.jpg">
@@ -71,7 +71,7 @@
   <p class="meta">Alternate rhythm, exposure/contrast pass.</p>
 </div>
 
-<!-- 6 -->
+<!-- 5 -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" poster="/assets/posters/main2.jpg">
@@ -82,7 +82,7 @@
   <p class="meta">Beat-matched transitions, tighter cuts.</p>
 </div>
 
-<!-- 7 -->
+<!-- 6 -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" poster="/assets/posters/sequence1.jpg">
@@ -93,7 +93,7 @@
   <p class="meta">Music-driven edit; emphasis on timing & impact.</p>
 </div>
 
-<!-- 8 (Design+Video banner) -->
+<!-- 7 (Design+Video banner) -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" poster="/assets/posters/summer-sale.jpg">
@@ -119,7 +119,7 @@
 </div>
 
 <div class="card">
-  <img src="/assets/Summer Sale Banner.png" alt="Summer Sale static banner">
+  <img src="/assets/summer-sale.jpg" alt="Summer Sale static banner">
   <h3>“Summer Sale” Static Banner</h3>
   <p class="meta">Bold color, layered textures, CTA variants.</p>
 </div>
