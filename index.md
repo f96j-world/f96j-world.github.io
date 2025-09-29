@@ -63,37 +63,48 @@
 <!-- 4 -->
 <div class="card">
   <div class="video">
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/main.jpg">
+      <source src="/assets/Main.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h3>Narrative Flow — Main Edit</h3>
+  <p class="meta">A storytelling-driven cut built around rhythm, B-roll integration, and scene progression. Focused on masking and mask tracing.</p>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <div class="video">
     <video controls preload="metadata" poster="/assets/posters/main1.jpg">
       <source src="/assets/main1.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Main Edit — Variation 1</h3>
-  <p class="meta">Alternate rhythm, exposure/contrast pass.</p>
+  <h3>Momentum Cut — Main Variation 1</h3>
+  <p class="meta">Alternate take with snappier transitions and quicker pacing. Beat alignment and camera-movement syncing keep the energy high.</p>
 </div>
 
-<!-- 5 -->
+<!-- 6 -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" poster="/assets/posters/main2.jpg">
       <source src="/assets/main2.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Main Edit — Variation 2</h3>
-  <p class="meta">Beat-matched transitions, tighter cuts.</p>
-</div>
-
-<!-- 6 -->
-<div class="card">
-  <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/sequence1.jpg">
-      <source src="/assets/sequence1.mp4" type="video/mp4">
-    </video>
-  </div>
-  <h3>Sequence Sync</h3>
-  <p class="meta">Music-driven edit; emphasis on timing & impact.</p>
+  <h3>Playstation Logo Manipulation</h3>
+  <p class="meta">Creative reinterpretation of an iconic brand identity through digital design</p>
 </div>
 
 <!-- 7 (Design+Video banner) -->
+<div class="card">
+  <div class="video">
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/summer-sale.jpg">
+  <source src="/assets/summer-sale-banner.mp4" type="video/mp4">
+</video>
+  </div>
+  <h3>“Summer Sale” Banner</h3>
+  <p class="meta">Photoshop design + animated CTA.</p>
+</div>
+
+<!-- 8 (Text Effect Transition) -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/summer-sale.jpg">
