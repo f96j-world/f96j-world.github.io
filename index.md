@@ -107,12 +107,12 @@
 <!-- 8 (Text Effect Transition) -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/summer-sale.jpg">
-  <source src="/assets/summer-sale-banner.mp4" type="video/mp4">
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/Filip1.jpg">
+  <source src="/assets/Filip1.mp4" type="video/mp4">
 </video>
   </div>
-  <h3>“Summer Sale” Banner</h3>
-  <p class="meta">Photoshop design + animated CTA.</p>
+  <h3>Motion Identity</h3>
+  <p class="meta">Dynamic name reveal with sleek, fast-paced graphic animation</p>
 </div>
 
 </div>
