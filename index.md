@@ -52,12 +52,12 @@
 <!-- 3 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/main.jpg">
-      <source src="/assets/main.mp4" type="video/mp4">
+    <video controls preload="metadata" poster="/assets/posters/coffee-explainer.jpg">
+      <source src="/assets/coffee-explainer.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Main Edit</h3>
-  <p class="meta">Narrative structure, B-roll integration, transitions.</p>
+  <h3>Coffee Explainer - Motion & Still</h3>
+  <p class="meta">Narrative structure, transitions and integration.</p>
 </div>
 
 <!-- 4 -->
