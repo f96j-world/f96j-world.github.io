@@ -70,7 +70,7 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .lightbox img{max-width:90%;max-height:90%;margin-top:5%;border-radius:10px}
 .lightbox:target{display:block}
 
-/* Shrink logo + keep card heights consistent */
+/* Shrink logo + equal card heights */
 .card img.logo{max-width:140px;height:auto;display:block;margin:20px auto}
 .grid .card{display:flex;flex-direction:column;justify-content:flex-start}
 
