@@ -1,59 +1,56 @@
-/* ---------- Base (compact + readable) ---------- */
+/* ===== Blaugrana Theme (compact + readable) ===== */
 :root{
   --barca-blue:#004D98;
   --barca-garnet:#A50044;
   --barca-gold:#EDBB00;
-  --light-bg:#f7f7f9;
+  --page-bg:#f5f6f9;
 }
+html,body{margin:0}
 body{
-  max-width:1000px;
-  margin:0 auto;
-  padding:20px;
+  max-width:1000px; margin:0 auto; padding:20px;
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  line-height:1.6; color:#222;
-  background: var(--light-bg);
+  line-height:1.6; color:#222; background:var(--page-bg);
 }
 
-/* ---------- Banner ---------- */
+/* Top banner (Cayman/Minimal header override) */
 .page-header{
-  background: linear-gradient(90deg, var(--barca-blue), var(--barca-garnet)) !important;
-  padding: 2rem 1rem; color:#fff; text-align:center;
+  background:linear-gradient(90deg,var(--barca-blue),var(--barca-garnet)) !important;
+  padding:1.6rem 1rem; color:#fff; text-align:center;
 }
-.page-header .project-name{ font-size:2rem; margin:0; font-weight:700; }
-.page-header .project-tagline{ font-size:1rem; margin-top:.4rem; color:#eee; }
+.page-header .project-name{font-size:1.9rem; margin:0; font-weight:800}
+.page-header .project-tagline{font-size:1rem; margin:.35rem 0 0; color:#f0f0f0}
 
-/* ---------- Hero (headshot + buttons) ---------- */
+/* Hero */
 img.headshot{
   width:120px; height:120px; border-radius:50%; object-fit:cover;
-  display:block; margin:16px auto;
-  border:3px solid var(--barca-gold);
+  display:block; margin:16px auto 8px; border:3px solid var(--barca-gold);
 }
-.btns{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:22px 0; }
+.btns{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:18px 0 28px}
 .btn{
-  border:1px solid var(--barca-blue); color:var(--barca-blue);
-  text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:600; font-size:.95rem;
-  background:#fff;
+  border:1px solid var(--barca-blue); color:var(--barca-blue); background:#fff;
+  text-decoration:none; padding:8px 16px; border-radius:8px; font-weight:700; font-size:.95rem;
 }
-.btn:hover{ background:var(--barca-blue); color:#fff; }
+.btn:hover{background:var(--barca-blue); color:#fff}
 
-/* ---------- Section headers ---------- */
+/* Section titles */
 h2{
-  margin-top:2.5rem; font-size:1.3rem; font-weight:700;
-  color:var(--barca-blue); border-left:6px solid var(--barca-gold);
-  padding-left:8px;
+  margin-top:2.2rem; font-size:1.28rem; font-weight:800; color:var(--barca-blue);
+  border-left:6px solid var(--barca-gold); padding-left:10px;
 }
 
-/* ---------- Grids & cards ---------- */
-.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:1rem; }
-.card{ background:#fff; border:1px solid #eee; border-radius:10px; padding:12px;
-       box-shadow:0 2px 8px rgba(0,0,0,.06); }
-.card h3{ margin:6px 0; font-size:1.05rem; color:var(--barca-garnet); }
-.card .meta{ font-size:.9rem; color:#555; }
-.card img{ width:100%; border-radius:6px; }
+/* Grid + Cards */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:1rem}
+.card{
+  background:#fff; border:1px solid #eaeaea; border-radius:12px; padding:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.card h3{margin:8px 0 6px; font-size:1.05rem; color:var(--barca-garnet)}
+.card .meta{font-size:.9rem; color:#555}
+.card img{width:100%; border-radius:8px}
 
-/* ---------- Responsive video embed ---------- */
-.video{ position:relative; width:100%; padding-top:56.25%; border-radius:8px; overflow:hidden; background:#000; margin-bottom:8px; }
-.video iframe, .video video{ position:absolute; top:0; left:0; width:100%; height:100%; }
+/* Responsive video */
+.video{position:relative; width:100%; padding-top:56.25%; border-radius:8px; overflow:hidden; background:#000; margin-bottom:8px}
+.video video,.video iframe{position:absolute; inset:0; width:100%; height:100%}
 
-/* Links color */
-a{ color:var(--barca-blue); } a:hover{ color:var(--barca-garnet); }
+/* Links */
+a{color:var(--barca-blue)} a:hover{color:var(--barca-garnet)}
