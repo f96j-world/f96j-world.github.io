@@ -41,26 +41,15 @@
 <!-- 2 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/party1.jpg">
-      <source src="/assets/party1.mp4" type="video/mp4">
+    <video controls preload="metadata" poster="/assets/posters/party.jpg">
+      <source src="/assets/party.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Party Highlights Edit — Cut A</h3>
+  <h3>Party Highlights Edit</h3>
   <p class="meta">Music-synced montage, color balance, denoise.</p>
 </div>
 
 <!-- 3 -->
-<div class="card">
-  <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/party2.jpg">
-      <source src="/assets/party2.mp4" type="video/mp4">
-    </video>
-  </div>
-  <h3>Party Highlights Edit — Cut B</h3>
-  <p class="meta">Alternate pacing and warmer grade.</p>
-</div>
-
-<!-- 4 -->
 <div class="card">
   <div class="video">
     <video controls preload="metadata" poster="/assets/posters/main.jpg">
