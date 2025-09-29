@@ -131,7 +131,7 @@
 </div>
 
 <div class="card">
-  <img src="/assets/The Pod Pro.png" alt="The Pod Pro logo">
+  <img src="/assets/thepodpro.png" alt="The Pod Pro logo">
   <h3>The Pod Pro — Logo</h3>
   <p class="meta">Podcast identity; layered glow & depth.</p>
 </div>
