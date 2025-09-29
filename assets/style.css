@@ -76,3 +76,18 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   border-radius:10px;
 }
 .lightbox:target { display:block; }
+
+/* Logo sizing in grid */
+.card img.logo {
+  max-width: 140px;  /* shrink logo inside card */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Make cards equal height (so Pod Pro doesn’t look smaller) */
+.grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
