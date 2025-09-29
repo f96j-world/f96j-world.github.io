@@ -164,4 +164,5 @@
 ---
 
 ## Tools
-Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets
+Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress 
+Meta Business Suite · Canva · Various SEO tools
