@@ -57,7 +57,7 @@
     </video>
   </div>
   <h3>Coffee Explainer - Motion & Still</h3>
-  <p class="meta">Narrative structure, transitions and integration.</p>
+  <p class="meta">Short-form explainer with supporting static visual. Tagline: “Brew better, every morning.”</p>
 </div>
 
 <!-- 4 -->
