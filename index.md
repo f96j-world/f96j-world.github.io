@@ -34,7 +34,7 @@
       <source src="/assets/yt-intro.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>YouTube Intro (Sunny-style)</h3>
+  <h3>YouTube Intro </h3>
   <p class="meta">Motion graphics, pacing, audio cleanup.</p>
 </div>
 
