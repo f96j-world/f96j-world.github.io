@@ -5,7 +5,6 @@
 # Filip Janev
 **Creative Editor & Junior Media Buyer** — I create, polish, and launch content that performs. And everything in between.
 
-<p align="center"><img src="/assets/toprated.png" alt="Upwork Top Rated badge" class="badge"></p>
 
 <div class="btns">
   <a class="btn" href="mailto:fjanev996@gmail.com">Email</a>
