@@ -113,8 +113,8 @@
 <div class="grid">
 
 <div class="card">
-  <img src="/assets/Mars_BeforeAfter_SideBySide.jpg" alt="Mars Before/After composite">
-  <h3>Mars Composite — Before/After</h3>
+  <img src="/assets/mars-with-caption.jpg" alt="Mars Before/After composite">
+  <h3>Mars Composite — With Caption</h3>
   <p class="meta">Photo manipulation & sky replacement.</p>
 </div>
 
