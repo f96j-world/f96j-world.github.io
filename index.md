@@ -30,9 +30,9 @@
 <!-- 1 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/yt-intro.jpg">
-      <source src="/assets/yt-intro.mp4" type="video/mp4">
-    </video>
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/yt-intro.jpg">
+  <source src="/assets/yt-intro.mp4" type="video/mp4">
+</video>
   </div>
   <h3>YouTube Intro </h3>
   <p class="meta">Motion graphics, pacing, audio cleanup.</p>
@@ -41,9 +41,9 @@
 <!-- 2 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/party.jpg">
-      <source src="/assets/party.mp4" type="video/mp4">
-    </video>
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/party.jpg">
+  <source src="/assets/party.mp4" type="video/mp4">
+</video>
   </div>
   <h3>Party Highlights Edit</h3>
   <p class="meta">Music-synced montage, color balance, denoise.</p>
@@ -52,9 +52,9 @@
 <!-- 3 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/coffee-explainer.jpg">
-      <source src="/assets/coffee-explainer.mp4" type="video/mp4">
-    </video>
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/coffee-explainer.jpg">
+  <source src="/assets/coffee-explainer.mp4" type="video/mp4">
+</video>
   </div>
   <h3>Coffee Explainer - Motion & Still</h3>
   <p class="meta">Short-form explainer with supporting static visual. Tagline: “Brew better, every morning.”</p>
@@ -96,9 +96,9 @@
 <!-- 7 (Design+Video banner) -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/posters/summer-sale.jpg">
-      <source src="/assets/summer-sale-banner.mp4" type="video/mp4">
-    </video>
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/summer-sale.jpg">
+  <source src="/assets/summer-sale-banner.mp4" type="video/mp4">
+</video>
   </div>
   <h3>“Summer Sale” Banner</h3>
   <p class="meta">Photoshop design + animated CTA.</p>
@@ -109,42 +109,36 @@
 ---
 
 ## 🎨 Design & Logos
+
 <div class="grid">
 
-  <!-- Mars -->
-  <div class="card">
-    <a href="#lb-mars"><img src="/assets/mars-with-caption.jpg" alt="Mars Composite"></a>
-    <h3>Mars Composite — With Caption</h3>
-    <p class="meta">Photo manipulation & sky replacement.</p>
-  </div>
-
-  <!-- Summer Sale -->
-  <div class="card">
-    <a href="#lb-sale"><img src="/assets/summer-sale.jpg" alt="Summer Sale static banner"></a>
-    <h3>“Summer Sale” Static Banner</h3>
-    <p class="meta">Bold color, layered textures, CTA variants.</p>
-  </div>
-
-  <!-- Pod Pro -->
-  <div class="card">
-    <a href="#lb-pod"><img class="logo" src="/assets/thepodpro.png" alt="The Pod Pro logo"></a>
-    <h3>The Pod Pro — Logo</h3>
-    <p class="meta">Podcast identity; layered glow & depth.</p>
-  </div>
-
+<div class="card">
+  <img src="/assets/mars-with-caption.jpg" alt="Mars Before/After composite">
+  <h3>Mars Composite — With Caption</h3>
+  <p class="meta">Photo manipulation & sky replacement.</p>
 </div>
-
-<!-- Lightboxes (must be OUTSIDE the grid) -->
-<div id="lb-mars" class="lightbox">
+<div id="mars-lightbox" class="lightbox">
   <a href="#"><img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full"></a>
 </div>
 
-<div id="lb-sale" class="lightbox">
-  <a href="#"><img src="/assets/summer-sale.jpg" alt="Summer Sale Full"></a>
+<div class="card">
+  <img src="/assets/summer-sale.jpg" alt="Summer Sale static banner">
+  <h3>“Summer Sale” Static Banner</h3>
+  <p class="meta">Bold color, layered textures, CTA variants.</p>
+</div>
+<div id="mars-lightbox" class="lightbox">
+  <a href="#"><img src="/assets/summer-sale.jpg" alt="Summer Sale static banner Full"></a>
 </div>
 
-<div id="lb-pod" class="lightbox">
-  <a href="#"><img src="/assets/thepodpro.png" alt="The Pod Pro Full"></a>
+<div class="card">
+  <img src="/assets/thepodpro.png" alt="The Pod Pro logo">
+  <h3>The Pod Pro — Logo</h3>
+  <p class="meta">Podcast identity; layered glow & depth.</p>
+</div>
+<div id="mars-lightbox" class="lightbox">
+  <a href="#"><img src="/assets/thepodpro.png" alt="The Pod Pro logo Full"></a>
+</div>
+
 </div>
 
 ---
