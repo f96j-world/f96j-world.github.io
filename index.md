@@ -125,12 +125,6 @@
 </div>
 
 <div class="card">
-  <img src="/assets/Test2.png" alt="Logo mark">
-  <h3>Brand Mark</h3>
-  <p class="meta">Vector logo exploration (AI/Illustrator).</p>
-</div>
-
-<div class="card">
   <img src="/assets/thepodpro.png" alt="The Pod Pro logo">
   <h3>The Pod Pro — Logo</h3>
   <p class="meta">Podcast identity; layered glow & depth.</p>
