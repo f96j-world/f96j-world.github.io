@@ -117,17 +117,26 @@
   <h3>Mars Composite — With Caption</h3>
   <p class="meta">Photo manipulation & sky replacement.</p>
 </div>
+<div id="mars-lightbox" class="lightbox">
+  <a href="#"><img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full"></a>
+</div>
 
 <div class="card">
   <img src="/assets/summer-sale.jpg" alt="Summer Sale static banner">
   <h3>“Summer Sale” Static Banner</h3>
   <p class="meta">Bold color, layered textures, CTA variants.</p>
 </div>
+<div id="mars-lightbox" class="lightbox">
+  <a href="#"><img src="/assets/summer-sale.jpg" alt="Summer Sale static banner Full"></a>
+</div>
 
 <div class="card">
   <img src="/assets/thepodpro.png" alt="The Pod Pro logo">
   <h3>The Pod Pro — Logo</h3>
   <p class="meta">Podcast identity; layered glow & depth.</p>
+</div>
+<div id="mars-lightbox" class="lightbox">
+  <a href="#"><img src="/assets/thepodpro.png" alt="The Pod Pro logo Full"></a>
 </div>
 
 </div>
