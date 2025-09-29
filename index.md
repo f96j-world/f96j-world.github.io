@@ -3,11 +3,9 @@
 <p align="center"><img src="/assets/headshot.jpg" alt="Filip Janev headshot" class="headshot"></p>
 
 # Filip Janev
-**Creative Editor & Junior Media Buyer** — I create, polish, and launch content that performs.
+**Creative Editor & Junior Media Buyer** — I create, polish, and launch content that performs. And everything in between.
 
-<p align="center">
-  <img src="/assets/toprated.png" alt="Upwork Top Rated" style="width:120px; margin:10px auto;">
-</p>
+<p align="center"><img src="/assets/toprated.png" alt="Upwork Top Rated badge" class="badge"></p>
 
 <div class="btns">
   <a class="btn" href="mailto:fjanev996@gmail.com">Email</a>
@@ -20,8 +18,9 @@
 ## Services
 - **Video Editing & Motion Graphics** (Premiere Pro, After Effects)
 - **Color & Sound Correction** (grading, cleanup, balancing)
-- **Media Buying & Ads Setup** (Meta Ads Manager — structure, ad-set uploads, optimizations)
+- **Media Buying & Ads Setup** (Meta Ads Manager — campaigns, ad-set uploads, optimizations)
 - **Design Basics** (thumbnails, social visuals)
+- **Tech Support/Data Analyst** (WordPress, SEO, content editing, Animoto)
 
 ---
 
@@ -29,10 +28,10 @@
 
 <div class="grid">
 
-<!-- YT Intro -->
+<!-- 1 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/yt-intro.jpg">
+    <video controls preload="metadata" poster="/assets/posters/yt-intro.jpg">
       <source src="/assets/yt-intro.mp4" type="video/mp4">
     </video>
   </div>
@@ -40,70 +39,81 @@
   <p class="meta">Motion graphics, pacing, audio cleanup.</p>
 </div>
 
-<!-- Party Highlights (1) -->
+<!-- 2 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/party1.jpg">
+    <video controls preload="metadata" poster="/assets/posters/party1.jpg">
       <source src="/assets/party1.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Party Highlights Edit (1)</h3>
-  <p class="meta">Event montage with color grading & music sync.</p>
+  <h3>Party Highlights Edit — Cut A</h3>
+  <p class="meta">Music-synced montage, color balance, denoise.</p>
 </div>
 
-<!-- Party Highlights (2) -->
+<!-- 3 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/party2.jpg">
+    <video controls preload="metadata" poster="/assets/posters/party2.jpg">
       <source src="/assets/party2.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Party Highlights Edit (2)</h3>
-  <p class="meta">Alternate grade and mix.</p>
+  <h3>Party Highlights Edit — Cut B</h3>
+  <p class="meta">Alternate pacing and warmer grade.</p>
 </div>
 
-<!-- Main Edit (1) -->
+<!-- 4 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/main1.jpg">
+    <video controls preload="metadata" poster="/assets/posters/main.jpg">
+      <source src="/assets/main.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h3>Main Edit</h3>
+  <p class="meta">Narrative structure, B-roll integration, transitions.</p>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <div class="video">
+    <video controls preload="metadata" poster="/assets/posters/main1.jpg">
       <source src="/assets/main1.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Main Edit (1)</h3>
-  <p class="meta">Narrative structure with B-roll & transitions.</p>
+  <h3>Main Edit — Variation 1</h3>
+  <p class="meta">Alternate rhythm, exposure/contrast pass.</p>
 </div>
 
-<!-- Main Edit (2) -->
+<!-- 6 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/main2.jpg">
+    <video controls preload="metadata" poster="/assets/posters/main2.jpg">
       <source src="/assets/main2.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Main Edit (2)</h3>
-  <p class="meta">Alternate pacing and effects.</p>
+  <h3>Main Edit — Variation 2</h3>
+  <p class="meta">Beat-matched transitions, tighter cuts.</p>
 </div>
 
-<!-- Sequence Sync -->
+<!-- 7 -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/sequence1.jpg">
+    <video controls preload="metadata" poster="/assets/posters/sequence1.jpg">
       <source src="/assets/sequence1.mp4" type="video/mp4">
     </video>
   </div>
   <h3>Sequence Sync</h3>
-  <p class="meta">Music-driven transitions & timing.</p>
+  <p class="meta">Music-driven edit; emphasis on timing & impact.</p>
 </div>
 
-<!-- Summer Sale Banner (motion graphic) -->
+<!-- 8 (Design+Video banner) -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" poster="/assets/banner-thumb.jpg">
-      <source src="/assets/banner.mp4" type="video/mp4">
+    <video controls preload="metadata" poster="/assets/posters/summer-sale.jpg">
+      <source src="/assets/summer-sale-banner.mp4" type="video/mp4">
     </video>
   </div>
-  <h3>Summer Sale Banner (Motion Graphic)</h3>
-  <p class="meta">Graphic promo with animated elements.</p>
+  <h3>“Summer Sale” Banner</h3>
+  <p class="meta">Photoshop design + animated CTA.</p>
 </div>
 
 </div>
@@ -115,21 +125,27 @@
 <div class="grid">
 
 <div class="card">
-  <img src="/assets/mars-beforeafter.jpg" alt="Mars Before/After composite">
-  <h3>Before/After Composite</h3>
-  <p class="meta">Night sky composite, color work, cleanup.</p>
+  <img src="/assets/Mars_BeforeAfter_SideBySide.jpg" alt="Mars Before/After composite">
+  <h3>Mars Composite — Before/After</h3>
+  <p class="meta">Photo manipulation & sky replacement.</p>
 </div>
 
 <div class="card">
-  <img src="/assets/logo-podpro.png" alt="The Pod Pro logo">
-  <h3>Logo — The Pod Pro</h3>
-  <p class="meta">Illustrator + shape, glow & stroke work.</p>
+  <img src="/assets/Summer Sale Banner.png" alt="Summer Sale static banner">
+  <h3>“Summer Sale” Static Banner</h3>
+  <p class="meta">Bold color, layered textures, CTA variants.</p>
 </div>
 
 <div class="card">
-  <img src="/assets/banner-thumb.jpg" alt="Summer Sale design">
-  <h3>Summer Sale — Static Design</h3>
-  <p class="meta">Photoshop layout & color treatment.</p>
+  <img src="/assets/Test2.png" alt="Logo mark">
+  <h3>Brand Mark</h3>
+  <p class="meta">Vector logo exploration (AI/Illustrator).</p>
+</div>
+
+<div class="card">
+  <img src="/assets/The Pod Pro.png" alt="The Pod Pro logo">
+  <h3>The Pod Pro — Logo</h3>
+  <p class="meta">Podcast identity; layered glow & depth.</p>
 </div>
 
 </div>
@@ -137,13 +153,13 @@
 ---
 
 ## 📄 CV & Background
-<img src="/assets/cv-sneak.jpg" alt="CV preview" style="max-width:100%; border:1px solid #ddd; border-radius:8px;">
+<img src="/assets/cv-sneak.jpg" alt="CV preview" style="max-width:100%; border:1px solid #e1e4eb; border-radius:8px;">
 <p><a class="btn" href="/assets/FJ-CV.pdf" target="_blank">Download Full CV</a></p>
 
 ---
 
 ## 📊 Upwork History
-<img src="/assets/upwork-history.jpg" alt="Upwork history screenshot" style="max-width:100%; border:1px solid #ddd; border-radius:8px;">
+<img src="/assets/upwork-history.jpg" alt="Upwork history screenshot" style="max-width:100%; border:1px solid #e1e4eb; border-radius:8px;">
 <p><a class="btn" href="https://www.upwork.com/freelancers/~016c8e482f2485cc4b" target="_blank">View Full Upwork Profile</a></p>
 
 ---
