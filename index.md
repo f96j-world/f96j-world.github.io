@@ -174,7 +174,8 @@
 
 ## Tools
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
-Meta Business Suite · Canva · Various SEO tools
+Meta Business Suite · Canva · Various SEO tools`
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGK76DBC8H"></script>
