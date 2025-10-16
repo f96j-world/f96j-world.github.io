@@ -118,7 +118,7 @@
 <!-- 9 (FJ-Intro) -->
 <div class="card">
   <div class="video">
-    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/FJ-Intro.jpg">
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/FJ-Intro.png">
   <source src="/assets/FJ-Intro.mp4" type="video/mp4">
 </video>
   </div>
