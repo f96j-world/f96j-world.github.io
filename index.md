@@ -115,6 +115,17 @@
   <p class="meta">Dynamic name reveal with sleek, fast-paced graphic animation</p>
 </div>
 
+<!-- 9 (FJ-Intro) -->
+<div class="card">
+  <div class="video">
+    <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/FJ-Intro.jpg">
+  <source src="/assets/FJ-Intro.mp4" type="video/mp4">
+</video>
+  </div>
+  <h3>Short&Sweet Intro</h3>
+  <p class="meta">Short introduction, with a mix of footage and screen FX.</p>
+</div>
+
 </div>
 
 ---
