@@ -167,23 +167,23 @@
 </div>
 
 <!-- Lightboxes -->
-<div id="lb-mars" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+<div id="lb-mars" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox('lb-mars')">×</span>
   <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full">
 </div>
 
-<div id="lb-sale" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+<div id="lb-sale" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox('lb-sale')">×</span>
   <img src="/assets/summer-sale.jpg" alt="Summer Sale Full">
 </div>
 
-<div id="lb-pod" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+<div id="lb-pod" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox('lb-pod')">×</span>
   <img src="/assets/thepodpro.png" alt="The Pod Pro Full">
 </div>
 
-<div id="lb-thumbnail" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+<div id="lb-thumbnail" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox('lb-thumbnail')">×</span>
   <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
 </div>
 
@@ -205,79 +205,36 @@
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
 Meta Business Suite · Canva · Various SEO tools
 
-<!-- ✅ FIXED SCRIPT: Event listeners attached to close buttons -->
 <script>
-(function () {
-  const LB_SELECTOR = '.lightbox';
-  const CLOSE_SELECTOR = '.lightbox-close';
+// Simple, bulletproof lightbox close function
+function closeLightbox(id) {
+  var lb = document.getElementById(id);
+  if (lb) {
+    lb.style.display = 'none';
+    document.documentElement.style.overflow = '';
+    history.replaceState(null, document.title, window.location.pathname);
+  }
+}
 
-  function lockScroll() {
+// Close on backdrop click
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('lightbox')) {
+    var lbId = e.target.id;
+    closeLightbox(lbId);
+  }
+});
+
+// Lock scroll when lightbox opens
+window.addEventListener('hashchange', function() {
+  if (location.hash && location.hash.startsWith('#lb-')) {
     document.documentElement.style.overflow = 'hidden';
   }
-  
-  function unlockScroll() {
-    document.documentElement.style.overflow = '';
-  }
+});
 
-  function closeLightbox(lb) {
-    if (!lb) return;
-    
-    // Remove "is-open" class
-    lb.classList.remove('is-open');
-
-    // Temporarily remove id to break :target, then restore it
-    const oldId = lb.id;
-    lb.removeAttribute('id');
-    
-    // Clear the hash without jumping
-    history.replaceState(null, document.title, window.location.pathname + window.location.search);
-    
-    // Restore id after paint so future opens still work
-    setTimeout(() => {
-      lb.id = oldId;
-    }, 40);
-
-    // Unlock scroll
-    unlockScroll();
-  }
-
-  // Attach click handlers to all close buttons
-  document.addEventListener('DOMContentLoaded', function() {
-    const closeButtons = document.querySelectorAll(CLOSE_SELECTOR);
-    
-    closeButtons.forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const lb = btn.closest(LB_SELECTOR);
-        closeLightbox(lb);
-      });
-    });
-
-    // Also close when clicking the backdrop (outside the image)
-    const lightboxes = document.querySelectorAll(LB_SELECTOR);
-    lightboxes.forEach(function(lb) {
-      lb.addEventListener('click', function(e) {
-        // Only close if clicking the backdrop itself, not the image
-        if (e.target === lb) {
-          closeLightbox(lb);
-        }
-      });
-    });
-
-    // Lock scroll when lightbox opens via hash
-    window.addEventListener('hashchange', function() {
-      if (location.hash && location.hash.startsWith('#lb-')) {
-        lockScroll();
-      }
-    });
-
-    // Lock scroll on initial load if hash is present
-    if (location.hash && location.hash.startsWith('#lb-')) {
-      lockScroll();
-    }
-  });
-})();
+// Lock scroll on initial load if hash present
+if (location.hash && location.hash.startsWith('#lb-')) {
+  document.documentElement.style.overflow = 'hidden';
+}
 </script>
 
 
