@@ -157,30 +157,38 @@
 </div>
 
 <!-- AE - YouTube Thumbnail -->
-  <div class="card">
-    <a href="#lb-thumbnail"><img class="meta" src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail"></a>
-    <h3>AE - YouTube Thumbnail</h3>
-    <p class="meta">A cinematic YouTube thumbnail created in Adobe Photoshop, designed to capture the humor and exhaustion of learning SOMETHING.</p>
-  </div>
+<div class="card">
+  <a href="#lb-thumbnail">
+    <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
+  </a>
+  <h3>AE - YouTube Thumbnail</h3>
+  <p class="meta">A cinematic YouTube thumbnail created in Adobe Photoshop, designed to capture the humor and exhaustion of learning SOMETHING.</p>
+</div>
+
 
 </div>
 
 <!-- Lightboxes (must be OUTSIDE the grid) -->
-<div id="lb-mars" class="lightbox">
-  <a href="#"><img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full"></a>
+<div id="lb-mars" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full">
 </div>
 
-<div id="lb-sale" class="lightbox">
-  <a href="#"><img src="/assets/summer-sale.jpg" alt="Summer Sale Full"></a>
+<div id="lb-sale" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img src="/assets/summer-sale.jpg" alt="Summer Sale Full">
 </div>
 
-<div id="lb-pod" class="lightbox">
-  <a href="#"><img src="/assets/thepodpro.png" alt="The Pod Pro Full"></a>
+<div id="lb-pod" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img src="/assets/thepodpro.png" alt="The Pod Pro Full">
 </div>
 
-<div id="lb-thumbnail" class="lightbox">
-  <a href="#"><img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail"></a>
+<div id="lb-thumbnail" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
 </div>
+
 
 ---
 
@@ -199,6 +207,53 @@
 ## Tools
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
 Meta Business Suite · Canva · Various SEO tools`
+
+<script>
+(function () {
+  function clearHashWithoutJump() {
+    history.replaceState(null, document.title, window.location.pathname + window.location.search);
+    unlockScroll();
+  }
+
+  function lockScroll() {
+    document.documentElement.style.overflow = 'hidden';
+  }
+  function unlockScroll() {
+    document.documentElement.style.overflow = '';
+  }
+  function onHashChange() {
+    if (location.hash.startsWith('#lb-')) {
+      lockScroll();
+      const btn = document.querySelector(location.hash + ' .lightbox-close');
+      if (btn) btn.focus({ preventScroll: true });
+    } else {
+      unlockScroll();
+    }
+  }
+
+  // backdrop click + button close
+  document.querySelectorAll('.lightbox').forEach(function (lb) {
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lightbox-close')) {
+        e.preventDefault();
+        clearHashWithoutJump();
+      }
+    });
+    const img = lb.querySelector('img');
+    if (img) img.addEventListener('click', function (e) { e.stopPropagation(); });
+  });
+
+  // Esc to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && location.hash.startsWith('#lb-')) {
+      clearHashWithoutJump();
+    }
+  });
+
+  window.addEventListener('hashchange', onHashChange);
+  onHashChange(); // run on load in case a hash is present
+})();
+</script>
 
 
 <!-- Google tag (gtag.js) -->
