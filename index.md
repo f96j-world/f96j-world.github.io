@@ -167,23 +167,23 @@
 </div>
 
 <!-- Lightboxes -->
-<div id="lb-mars" class="lightbox">
-  <span class="lb-close" data-close="lb-mars">×</span>
+<div id="lb-mars" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-mars">×</button>
   <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full">
 </div>
 
-<div id="lb-sale" class="lightbox">
-  <span class="lb-close" data-close="lb-sale">×</span>
+<div id="lb-sale" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-sale">×</button>
   <img src="/assets/summer-sale.jpg" alt="Summer Sale Full">
 </div>
 
-<div id="lb-pod" class="lightbox">
-  <span class="lb-close" data-close="lb-pod">×</span>
+<div id="lb-pod" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-pod">×</button>
   <img src="/assets/thepodpro.png" alt="The Pod Pro Full">
 </div>
 
-<div id="lb-thumbnail" class="lightbox">
-  <span class="lb-close" data-close="lb-thumbnail">×</span>
+<div id="lb-thumbnail" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-thumbnail">×</button>
   <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
 </div>
 
@@ -205,9 +205,10 @@
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
 Meta Business Suite · Canva · Various SEO tools
 
+<!-- ✅ FINAL LIGHTBOX SCRIPT (no inline display edits; breaks :target cleanly) -->
 <script type="text/javascript">
 (function() {
-  // Wait for DOM to be ready
+  // Run after DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -215,55 +216,88 @@ Meta Business Suite · Canva · Various SEO tools
   }
 
   function init() {
-    // Event delegation on document for close buttons
+    // Event delegation: close button and backdrop
     document.addEventListener('click', function(e) {
-      var target = e.target;
-      
-      // Check if clicked element has data-close attribute
-      if (target.hasAttribute('data-close')) {
+      const t = e.target;
+
+      // Close via button
+      if (t.matches('.lightbox-close[data-close]')) {
         e.preventDefault();
         e.stopPropagation();
-        var lbId = target.getAttribute('data-close');
-        closeLightbox(lbId);
+        const id = t.getAttribute('data-close');
+        const lb = document.getElementById(id);
+        closeLightbox(lb);
         return;
       }
-      
-      // Check if clicked on lightbox backdrop
-      if (target.classList.contains('lightbox')) {
+
+      // Backdrop click closes
+      if (t.classList.contains('lightbox')) {
         e.preventDefault();
-        closeLightbox(target.id);
+        closeLightbox(t);
         return;
       }
     });
-    
-    // Handle hash changes
-    window.addEventListener('hashchange', handleHash);
-    handleHash(); // Check on load
+
+    // Prevent image click bubbling
+    document.querySelectorAll('.lightbox img').forEach(img => {
+      img.addEventListener('click', e => e.stopPropagation());
+    });
+
+    // Esc to close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isLightboxHash()) {
+        closeLightbox(document.querySelector(location.hash));
+      }
+    });
+
+    // Hash changes manage scroll lock
+    window.addEventListener('hashchange', onHashChange);
+    onHashChange();
   }
 
-  function handleHash() {
-    if (location.hash && location.hash.indexOf('lb-') > -1) {
+  function isLightboxHash() {
+    return !!(location.hash && location.hash.startsWith('#lb-'));
+  }
+
+  function onHashChange() {
+    if (isLightboxHash()) {
       document.documentElement.style.overflow = 'hidden';
+      // Focus the close button for accessibility
+      const btn = document.querySelector(location.hash + ' .lightbox-close');
+      if (btn) btn.focus({ preventScroll: true });
+    } else {
+      document.documentElement.style.overflow = '';
     }
   }
 
-  function closeLightbox(id) {
-    var lb = document.getElementById(id);
-    if (!lb) return;
-    
-    lb.style.display = 'none';
-    document.documentElement.style.overflow = '';
-    
-    // Clear hash
-    if (window.history && window.history.replaceState) {
-      window.history.replaceState(null, '', window.location.pathname);
+  function clearHashWithoutJump() {
+    if (history.replaceState) {
+      history.replaceState(null, document.title, location.pathname + location.search);
     } else {
-      window.location.hash = '';
+      // fallback
+      location.hash = '';
     }
+  }
+
+  function closeLightbox(lbEl) {
+    if (!lbEl) {
+      clearHashWithoutJump();
+      document.documentElement.style.overflow = '';
+      return;
+    }
+    // DO NOT set inline display. That breaks future :target opens.
+    // Break :target immediately by removing id, then restore it.
+    const oldId = lbEl.id;
+    lbEl.removeAttribute('id');      // :target no longer matches instantly
+    clearHashWithoutJump();          // remove hash without page jump
+    document.documentElement.style.overflow = '';
+
+    setTimeout(function() {
+      lbEl.id = oldId;               // restore so anchors work again
+    }, 40);
   }
 })();
 </script>
-
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGK76DBC8H"></script>
@@ -271,6 +305,5 @@ Meta Business Suite · Canva · Various SEO tools
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-VGK76DBC8H');
 </script>
