@@ -8,11 +8,11 @@
 }
 
 html,body{margin:0}
+html{ scrollbar-gutter: stable; }  /* stop layout jump when overlay shows */
 body{
   max-width:1000px; margin:0 auto; padding:20px;
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   line-height:1.6; color:var(--ink);
-  /* subtle blaugrana wash for the WHOLE page (still readable) */
   background:
     linear-gradient(135deg, rgba(0,77,152,.08), rgba(165,0,68,.08)),
     var(--bg);
@@ -72,12 +72,48 @@ h2{
 /* Utility links */
 a{color:var(--blue)} a:hover{color:var(--garnet)}
 
-/* Lightbox */
-.lightbox{display:none;position:fixed;z-index:9999;inset:0;background:rgba(0,0,0,.9);text-align:center}
-.lightbox img{max-width:90%;max-height:90%;margin-top:5%;border-radius:10px}
-.lightbox:target{display:block}
+/* ===================== Lightbox (Upgraded) ===================== */
+/* Markup: 
+  <div id="lb-xyz" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img src="/assets/xyz.jpg" alt="...">
+  </div>
+*/
+.lightbox{
+  display:none; position:fixed; inset:0; z-index:9999;
+  background:rgba(0,0,0,.92);
+  padding:4vh 4vw;
+  text-align:center;
+  cursor: zoom-out;                 /* click backdrop to close */
+  overscroll-behavior: contain;     /* stop iOS scroll chaining */
+}
+.lightbox:target{ display:block; }
 
-/* ——— Logos: make them larger by default ——— */
+.lightbox img{
+  max-width: min(92vw, 1200px);
+  max-height: 88vh;
+  width:auto; height:auto;
+  margin:auto;
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  cursor: default;                  /* don’t imply zoom on the image */
+}
+
+/* visible close control */
+.lightbox-close{
+  position:absolute; top:16px; right:18px;
+  width:40px; height:40px; line-height:40px;
+  border:0; border-radius:50%;
+  background: rgba(255,255,255,.14);
+  color:#fff; font-size:28px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+}
+.lightbox-close:hover{ background: rgba(255,255,255,.22); }
+.lightbox-close:focus{ outline:2px solid var(--gold); outline-offset:2px; }
+
+/* ===================== Logos ===================== */
+/* Default logos in cards */
 .card img.logo{
   width: auto;
   max-width: 90%;
@@ -87,38 +123,29 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   object-fit: contain;
 }
 
-/* ——— Pod Pro logo: the PNG has huge transparent padding.
-      Zoom it inside its link wrapper and clip overflow. ——— */
+/* Pod Pro specific tile and zoom */
 .card a[href="#lb-pod"]{
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 220px;      /* gives the logo some vertical presence */
-  overflow: hidden;       /* hide the zoomed edges */
+  min-height: 220px;
+  overflow: hidden;
 }
-
 .card a[href="#lb-pod"] img.logo{
-  height: 180px;          /* scale by height so it’s consistently larger */
+  height: 180px;
   width: auto;
-  transform: scale(2.4);  /* zoom past the transparent padding */
+  transform: scale(2.4);
   transform-origin: center;
 }
 
-/* Slightly reduce zoom on small screens so it doesn’t dominate */
-@media (max-width: 480px){
-  .card a[href="#lb-pod"]{ min-height: 180px; }
-  .card a[href="#lb-pod"] img.logo{ height: 150px; transform: scale(2.0); }
-}
-
-/* ---------- POD PRO LOGO UPGRADE ---------- */
-/* Reusable tile for logos that need presence */
+/* Reusable, fancier tile + zoom (optional, if you’re using .logo-tile/.logo-zoom) */
 .logo-tile{
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 260px;          /* strong vertical presence */
+  min-height: 260px;
   border-radius: 10px;
   overflow: hidden;
   background:
@@ -129,42 +156,24 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .logo-tile::after{
   content:"";
   position:absolute; inset:-20%;
-  background:
-    radial-gradient(140px 140px at 28% 22%, rgba(237,187,0,.18), transparent 70%);
+  background: radial-gradient(140px 140px at 28% 22%, rgba(237,187,0,.18), transparent 70%);
   pointer-events:none;
 }
-.logo-tile:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0,0,0,.12);
-}
+.logo-tile:hover{ transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
 
-/* Big, zoomed logo to overcome transparent padding */
 .logo-zoom{
-  height: 200px;              /* consistent scale by height */
-  width: auto;
-  transform: scale(2.6);      /* push past empty PNG edges */
+  height: 200px; width:auto;
+  transform: scale(2.6);
   transform-origin: center;
-  filter: drop-shadow(0 14px 28px rgba(0,0,0,.22))
-          drop-shadow(0 2px 8px rgba(0,0,0,.12));
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,.22)) drop-shadow(0 2px 8px rgba(0,0,0,.12));
 }
-
-/* Optional: stronger featured variant if you want even more presence */
 .logo-zoom--plus{ transform: scale(3.0); }
 
-/* Keep other logos sane by default */
-.card img.logo{
-  width: auto;
-  max-width: 90%;
-  height: auto;
-  display: block;
-  margin: 28px auto 12px;
-  object-fit: contain;
-}
-
-/* Mobile tuning */
 @media (max-width: 480px){
+  .card a[href="#lb-pod"]{ min-height: 180px; }
+  .card a[href="#lb-pod"] img.logo{ height: 150px; transform: scale(2.0); }
+
   .logo-tile{ min-height: 210px; }
   .logo-zoom{ height: 160px; transform: scale(2.2); }
   .logo-zoom--plus{ transform: scale(2.6); }
 }
-
