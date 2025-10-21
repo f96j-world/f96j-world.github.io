@@ -5,7 +5,6 @@
 # Filip Janev
 **Creative Editor & Junior Media Buyer** — I create, polish, and launch content that performs. And everything in between.
 
-
 <div class="btns">
   <a class="btn" href="mailto:fjanev996@gmail.com">Email</a>
   <a class="btn" href="https://www.upwork.com/freelancers/~016c8e482f2485cc4b" target="_blank">Upwork</a>
@@ -27,8 +26,105 @@
 
 <div class="grid">
 
-<!-- your video cards -->
-<!-- omitted for brevity, unchanged -->
+  <!-- 1 -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/yt-intro.jpg">
+        <source src="/assets/yt-intro.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>YouTube Intro </h3>
+    <p class="meta">Motion graphics, pacing, audio cleanup.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/party.jpg">
+        <source src="/assets/party.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Party Highlights Edit</h3>
+    <p class="meta">Music-synced montage, color balance, denoise.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/coffee-explainer.jpg">
+        <source src="/assets/coffee-explainer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Coffee Explainer - Motion & Still</h3>
+    <p class="meta">Short-form explainer with supporting static visual. Tagline: “Brew better, every morning.”</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/main.jpg">
+        <source src="/assets/Main.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Narrative Flow — Main Edit</h3>
+    <p class="meta">A storytelling-driven cut built around rhythm, B-roll integration, and scene progression. Focused on masking and mask tracing.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" poster="/assets/posters/main1.jpg">
+        <source src="/assets/main1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Momentum Cut — Main Variation 1</h3>
+    <p class="meta">Alternate take with snappier transitions and quicker pacing. Beat alignment and camera-movement syncing keep the energy high.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" poster="/assets/posters/main2.jpg">
+        <source src="/assets/main2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Playstation Logo Manipulation</h3>
+    <p class="meta">Creative reinterpretation of an iconic brand identity through digital design</p>
+  </div>
+
+  <!-- 7 (Design+Video banner) -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/summer-sale.jpg">
+        <source src="/assets/summer-sale-banner.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>“Summer Sale” Banner</h3>
+    <p class="meta">Photoshop design + animated CTA.</p>
+  </div>
+
+  <!-- 8 (Text Effect Transition) -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/Filip1.jpg">
+        <source src="/assets/Filip1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Motion Identity</h3>
+    <p class="meta">Dynamic name reveal with sleek, fast-paced graphic animation</p>
+  </div>
+
+  <!-- 9 (FJ-Intro) -->
+  <div class="card">
+    <div class="video">
+      <video controls preload="metadata" playsinline loading="lazy" poster="/assets/posters/FJ-Intro.png">
+        <source src="/assets/FJ-Intro.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3>Short&Sweet Intro</h3>
+    <p class="meta">Short introduction, with a mix of footage and screen FX.</p>
+  </div>
+
 </div>
 
 ---
@@ -107,7 +203,7 @@
 
 ## Tools
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
-Meta Business Suite · Canva · Various SEO tools`
+Meta Business Suite · Canva · Various SEO tools
 
 <!-- ✅ FINAL FIXED SCRIPT -->
 <script>
