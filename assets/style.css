@@ -162,3 +162,4 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   /* larger close button target on small screens */
   .lightbox-close{ width:48px; height:48px; font-size:32px; }
 }
+ 
