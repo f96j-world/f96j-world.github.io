@@ -123,19 +123,21 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   object-fit: contain;
 }
 
-/* Pod Pro specific tile and zoom */
-.card a[href="#lb-pod"]{
+/* Generic logo tile behavior (works for Pod Pro and future logos) */
+.logo-tile{
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 220px;
+  min-height: 260px;
+  border-radius: 10px;
   overflow: hidden;
 }
-.card a[href="#lb-pod"] img.logo{
-  height: 180px;
+
+.logo-tile .logo-zoom{
+  height: 200px;          /* consistent scale by height */
   width: auto;
-  transform: scale(2.4);
+  transform: scale(2.6);  /* push past empty PNG edges */
   transform-origin: center;
 }
 
