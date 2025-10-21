@@ -73,12 +73,6 @@ h2{
 a{color:var(--blue)} a:hover{color:var(--garnet)}
 
 /* ===================== Lightbox (Upgraded) ===================== */
-/* Markup:
-  <div id="lb-xyz" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="lightbox-close" type="button" aria-label="Close">×</button>
-    <img src="/assets/xyz.jpg" alt="...">
-  </div>
-*/
 .lightbox{
   display:none; position:fixed; inset:0; z-index:9999;
   background:rgba(0,0,0,.92);
@@ -87,7 +81,10 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   cursor: zoom-out;                 /* click backdrop to close */
   overscroll-behavior: contain;     /* stop iOS scroll chaining */
 }
-.lightbox:target{ display:block; }
+.lightbox:target,
+.lightbox.is-open{                   /* also allow JS to force open */
+  display:block;
+}
 
 .lightbox img{
   position: relative;               /* ensure image sits below close button */
@@ -117,7 +114,6 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .lightbox-close:focus{ outline:2px solid var(--gold); outline-offset:2px; }
 
 /* ===================== Logos ===================== */
-/* Default logos in cards */
 .card img.logo{
   width: auto;
   max-width: 90%;
