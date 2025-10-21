@@ -75,7 +75,7 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 /* ===================== Lightbox (Upgraded) ===================== */
 /* Markup: 
   <div id="lb-xyz" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
     <img src="/assets/xyz.jpg" alt="...">
   </div>
 */
@@ -90,6 +90,8 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .lightbox:target{ display:block; }
 
 .lightbox img{
+  position: relative;               /* NEW */
+  z-index: 1;                       /* NEW - under button */
   max-width: min(92vw, 1200px);
   max-height: 88vh;
   width:auto; height:auto;
@@ -102,6 +104,8 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 /* visible close control */
 .lightbox-close{
   position:absolute; top:16px; right:18px;
+  z-index:2;                        /* NEW - above image */
+  pointer-events:auto;              /* ensure clickable */
   width:40px; height:40px; line-height:40px;
   border:0; border-radius:50%;
   background: rgba(255,255,255,.14);
@@ -132,24 +136,6 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   min-height: 260px;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.logo-tile .logo-zoom{
-  height: 200px;          /* consistent scale by height */
-  width: auto;
-  transform: scale(2.6);  /* push past empty PNG edges */
-  transform-origin: center;
-}
-
-/* Reusable, fancier tile + zoom (optional, if you’re using .logo-tile/.logo-zoom) */
-.logo-tile{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
-  border-radius: 10px;
-  overflow: hidden;
   background:
     radial-gradient(60% 60% at 50% 38%, rgba(0,77,152,.12), transparent 62%),
     radial-gradient(42% 42% at 65% 72%, rgba(165,0,68,.10), transparent 62%),
@@ -163,19 +149,20 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 }
 .logo-tile:hover{ transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
 
-.logo-zoom{
-  height: 200px; width:auto;
-  transform: scale(2.6);
+.logo-tile .logo-zoom{
+  height: 200px;          /* consistent scale by height */
+  width: auto;
+  transform: scale(2.6);  /* push past empty PNG edges */
   transform-origin: center;
   filter: drop-shadow(0 14px 28px rgba(0,0,0,.22)) drop-shadow(0 2px 8px rgba(0,0,0,.12));
 }
 .logo-zoom--plus{ transform: scale(3.0); }
 
 @media (max-width: 480px){
-  .card a[href="#lb-pod"]{ min-height: 180px; }
-  .card a[href="#lb-pod"] img.logo{ height: 150px; transform: scale(2.0); }
-
   .logo-tile{ min-height: 210px; }
   .logo-zoom{ height: 160px; transform: scale(2.2); }
   .logo-zoom--plus{ transform: scale(2.6); }
+
+  /* larger close button target on small screens */
+  .lightbox-close{ width:48px; height:48px; font-size:32px; }
 }
