@@ -110,3 +110,61 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   .card a[href="#lb-pod"]{ min-height: 180px; }
   .card a[href="#lb-pod"] img.logo{ height: 150px; transform: scale(2.0); }
 }
+
+/* ---------- POD PRO LOGO UPGRADE ---------- */
+/* Reusable tile for logos that need presence */
+.logo-tile{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;          /* strong vertical presence */
+  border-radius: 10px;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 60% at 50% 38%, rgba(0,77,152,.12), transparent 62%),
+    radial-gradient(42% 42% at 65% 72%, rgba(165,0,68,.10), transparent 62%),
+    linear-gradient(#fff,#fff);
+}
+.logo-tile::after{
+  content:"";
+  position:absolute; inset:-20%;
+  background:
+    radial-gradient(140px 140px at 28% 22%, rgba(237,187,0,.18), transparent 70%);
+  pointer-events:none;
+}
+.logo-tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+}
+
+/* Big, zoomed logo to overcome transparent padding */
+.logo-zoom{
+  height: 200px;              /* consistent scale by height */
+  width: auto;
+  transform: scale(2.6);      /* push past empty PNG edges */
+  transform-origin: center;
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,.22))
+          drop-shadow(0 2px 8px rgba(0,0,0,.12));
+}
+
+/* Optional: stronger featured variant if you want even more presence */
+.logo-zoom--plus{ transform: scale(3.0); }
+
+/* Keep other logos sane by default */
+.card img.logo{
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 28px auto 12px;
+  object-fit: contain;
+}
+
+/* Mobile tuning */
+@media (max-width: 480px){
+  .logo-tile{ min-height: 210px; }
+  .logo-zoom{ height: 160px; transform: scale(2.2); }
+  .logo-zoom--plus{ transform: scale(2.6); }
+}
+
