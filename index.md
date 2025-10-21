@@ -154,6 +154,13 @@
     <p class="meta">Podcast identity; layered glow & depth.</p>
   </div>
 
+<!-- AE - YouTube Thumbnail -->
+  <div class="card">
+    <a href="#lb-thumbnail"><img class="logo" src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail"></a>
+    <h3>AE - YouTube Thumbnail</h3>
+    <p class="meta">A cinematic YouTube thumbnail created in Adobe Photoshop, designed to capture the humor and exhaustion of learning SOMETHING.😌</p>
+  </div>
+
 </div>
 
 <!-- Lightboxes (must be OUTSIDE the grid) -->
@@ -167,6 +174,10 @@
 
 <div id="lb-pod" class="lightbox">
   <a href="#"><img src="/assets/thepodpro.png" alt="The Pod Pro Full"></a>
+</div>
+
+<div id="lb-thumbnail" class="lightbox">
+  <a href="#"><img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail"></a>
 </div>
 
 ---
