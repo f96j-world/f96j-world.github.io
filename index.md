@@ -170,22 +170,22 @@
 
 <!-- Lightboxes (must be OUTSIDE the grid) -->
 <div id="lb-mars" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
   <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full">
 </div>
 
 <div id="lb-sale" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
   <img src="/assets/summer-sale.jpg" alt="Summer Sale Full">
 </div>
 
 <div id="lb-pod" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
   <img src="/assets/thepodpro.png" alt="The Pod Pro Full">
 </div>
 
 <div id="lb-thumbnail" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
   <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
 </div>
 
