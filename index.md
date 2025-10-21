@@ -156,9 +156,9 @@
 
 <!-- AE - YouTube Thumbnail -->
   <div class="card">
-    <a href="#lb-thumbnail"><img class="logo" src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail"></a>
+    <a href="#lb-thumbnail"><img class="meta" src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail"></a>
     <h3>AE - YouTube Thumbnail</h3>
-    <p class="meta">A cinematic YouTube thumbnail created in Adobe Photoshop, designed to capture the humor and exhaustion of learning SOMETHING.😌</p>
+    <p class="meta">A cinematic YouTube thumbnail created in Adobe Photoshop, designed to capture the humor and exhaustion of learning SOMETHING.</p>
   </div>
 
 </div>
