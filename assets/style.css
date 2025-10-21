@@ -78,12 +78,18 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .lightbox:target{display:block}
 
 /* Logo sizing (for actual logos only) */
-.card img.logo{
-  max-width: clamp(180px, 60%, 420px);
-  height:auto; display:block; margin:20px auto;
-  object-fit:contain;
+.card img.logo {
+  width: auto;
+  max-width: 70%;              /* allow bigger logos */
+  height: auto;
+  display: block;
+  margin: 30px auto 10px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;         /* keep shape tidy if transparent bg */
 }
+
 /* Optional bigger logo for featured items */
-.card img.logo.logo--xl{
-  max-width: clamp(220px, 70%, 520px);
+.card img.logo.logo--xl {
+  max-width: 85%;
+  margin: 40px auto 12px;
 }
