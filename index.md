@@ -168,22 +168,22 @@
 
 <!-- Lightboxes -->
 <div id="lb-mars" class="lightbox">
-  <span class="lightbox-close" onclick="closeLightbox('lb-mars')">×</span>
+  <span class="lb-close" data-close="lb-mars">×</span>
   <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full">
 </div>
 
 <div id="lb-sale" class="lightbox">
-  <span class="lightbox-close" onclick="closeLightbox('lb-sale')">×</span>
+  <span class="lb-close" data-close="lb-sale">×</span>
   <img src="/assets/summer-sale.jpg" alt="Summer Sale Full">
 </div>
 
 <div id="lb-pod" class="lightbox">
-  <span class="lightbox-close" onclick="closeLightbox('lb-pod')">×</span>
+  <span class="lb-close" data-close="lb-pod">×</span>
   <img src="/assets/thepodpro.png" alt="The Pod Pro Full">
 </div>
 
 <div id="lb-thumbnail" class="lightbox">
-  <span class="lightbox-close" onclick="closeLightbox('lb-thumbnail')">×</span>
+  <span class="lb-close" data-close="lb-thumbnail">×</span>
   <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
 </div>
 
@@ -205,36 +205,63 @@
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
 Meta Business Suite · Canva · Various SEO tools
 
-<script>
-// Simple, bulletproof lightbox close function
-function closeLightbox(id) {
-  var lb = document.getElementById(id);
-  if (lb) {
+<script type="text/javascript">
+(function() {
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  function init() {
+    // Event delegation on document for close buttons
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Check if clicked element has data-close attribute
+      if (target.hasAttribute('data-close')) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lbId = target.getAttribute('data-close');
+        closeLightbox(lbId);
+        return;
+      }
+      
+      // Check if clicked on lightbox backdrop
+      if (target.classList.contains('lightbox')) {
+        e.preventDefault();
+        closeLightbox(target.id);
+        return;
+      }
+    });
+    
+    // Handle hash changes
+    window.addEventListener('hashchange', handleHash);
+    handleHash(); // Check on load
+  }
+
+  function handleHash() {
+    if (location.hash && location.hash.indexOf('lb-') > -1) {
+      document.documentElement.style.overflow = 'hidden';
+    }
+  }
+
+  function closeLightbox(id) {
+    var lb = document.getElementById(id);
+    if (!lb) return;
+    
     lb.style.display = 'none';
     document.documentElement.style.overflow = '';
-    history.replaceState(null, document.title, window.location.pathname);
+    
+    // Clear hash
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', window.location.pathname);
+    } else {
+      window.location.hash = '';
+    }
   }
-}
-
-// Close on backdrop click
-document.addEventListener('click', function(e) {
-  if (e.target.classList.contains('lightbox')) {
-    var lbId = e.target.id;
-    closeLightbox(lbId);
-  }
-});
-
-// Lock scroll when lightbox opens
-window.addEventListener('hashchange', function() {
-  if (location.hash && location.hash.startsWith('#lb-')) {
-    document.documentElement.style.overflow = 'hidden';
-  }
-});
-
-// Lock scroll on initial load if hash present
-if (location.hash && location.hash.startsWith('#lb-')) {
-  document.documentElement.style.overflow = 'hidden';
-}
+})();
 </script>
 
 
