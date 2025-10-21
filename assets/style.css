@@ -82,7 +82,7 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   overscroll-behavior: contain;     /* stop iOS scroll chaining */
 }
 .lightbox:target,
-.lightbox.is-open{                   /* also allow JS to force open */
+.lightbox.is-open{                   /* also allow JS to force open if needed */
   display:block;
 }
 
