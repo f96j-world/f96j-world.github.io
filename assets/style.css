@@ -49,14 +49,21 @@ h2{
 }
 
 /* Grids & cards */
-.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-top:.8rem}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px; margin-top:.8rem;
+}
 .card{
   background:#fff; border:1px solid #e9ecf1; border-radius:12px; padding:12px;
   box-shadow:0 3px 12px rgba(0,0,0,.06);
+  display:flex; flex-direction:column; justify-content:flex-start;
 }
 .card h3{margin:8px 0 6px; font-size:1.03rem; color:var(--garnet)}
 .card .meta{font-size:.9rem; color:#5b6275}
-.card img{width:100%; border-radius:8px}
+
+/* Thumbnails inside cards should fill the card width */
+.card img{width:100%; height:auto; display:block; border-radius:8px}
 
 /* Responsive video */
 .video{position:relative; width:100%; padding-top:56.25%; border-radius:8px; overflow:hidden; background:#000; margin-bottom:8px}
@@ -70,22 +77,13 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .lightbox img{max-width:90%;max-height:90%;margin-top:5%;border-radius:10px}
 .lightbox:target{display:block}
 
-/* Shrink logo + equal card heights */
-.card img.logo{max-width:140px;height:auto;display:block;margin:20px auto}
-.grid .card{display:flex;flex-direction:column;justify-content:flex-start}
-
-
-/* Logo sizing in grid */
-.card img.logo {
-  max-width: 140px;  /* shrink logo inside card */
-  height: auto;
-  display: block;
-  margin: 20px auto;
+/* Logo sizing (for actual logos only) */
+.card img.logo{
+  max-width: clamp(180px, 60%, 420px);
+  height:auto; display:block; margin:20px auto;
+  object-fit:contain;
 }
-
-/* Make cards equal height (so Pod Pro doesn’t look smaller) */
-.grid .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+/* Optional bigger logo for featured items */
+.card img.logo.logo--xl{
+  max-width: clamp(220px, 70%, 520px);
 }
