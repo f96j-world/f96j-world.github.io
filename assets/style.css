@@ -77,19 +77,36 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 .lightbox img{max-width:90%;max-height:90%;margin-top:5%;border-radius:10px}
 .lightbox:target{display:block}
 
-/* Logo sizing (for actual logos only) */
-.card img.logo {
+/* ——— Logos: make them larger by default ——— */
+.card img.logo{
   width: auto;
-  max-width: 70%;              /* allow bigger logos */
+  max-width: 90%;
   height: auto;
   display: block;
-  margin: 30px auto 10px;
+  margin: 28px auto 12px;
   object-fit: contain;
-  aspect-ratio: 1 / 1;         /* keep shape tidy if transparent bg */
 }
 
-/* Optional bigger logo for featured items */
-.card img.logo.logo--xl {
-  max-width: 85%;
-  margin: 40px auto 12px;
+/* ——— Pod Pro logo: the PNG has huge transparent padding.
+      Zoom it inside its link wrapper and clip overflow. ——— */
+.card a[href="#lb-pod"]{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;      /* gives the logo some vertical presence */
+  overflow: hidden;       /* hide the zoomed edges */
+}
+
+.card a[href="#lb-pod"] img.logo{
+  height: 180px;          /* scale by height so it’s consistently larger */
+  width: auto;
+  transform: scale(2.4);  /* zoom past the transparent padding */
+  transform-origin: center;
+}
+
+/* Slightly reduce zoom on small screens so it doesn’t dominate */
+@media (max-width: 480px){
+  .card a[href="#lb-pod"]{ min-height: 180px; }
+  .card a[href="#lb-pod"] img.logo{ height: 150px; transform: scale(2.0); }
 }
