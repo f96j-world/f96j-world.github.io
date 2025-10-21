@@ -205,13 +205,13 @@
 Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
 Meta Business Suite · Canva · Various SEO tools
 
-<!-- ✅ FINAL FIXED SCRIPT -->
+<!-- ✅ FINAL SCRIPT: class-based open + ID-swap close (no jump) -->
 <script>
 (function () {
   const LB_SELECTOR = '.lightbox';
   const CLOSE_SELECTOR = '.lightbox-close';
 
-  function isLightboxHash() {
+  function isLBHash() {
     return location.hash && location.hash.startsWith('#lb-');
   }
 
@@ -222,59 +222,21 @@ Meta Business Suite · Canva · Various SEO tools
     document.documentElement.style.overflow = '';
   }
 
-  function clearHashWithoutJump() {
+  function breakTargetAndClose(lb) {
+    if (!lb) return;
+    // 1) Remove "open" class
+    lb.classList.remove('is-open');
+
+    // 2) Temporarily remove id to break :target immediately, then restore it
+    const oldId = lb.id;
+    lb.removeAttribute('id');
+    // Clear the hash without jumping
     history.replaceState(null, document.title, window.location.pathname + window.location.search);
+    // Restore id after paint, so future opens still work
+    setTimeout(() => {
+      lb.id = oldId;
+    }, 40);
+
+    // 3) Unlock scroll
     unlockScroll();
   }
-
-  function onOpenFromHash() {
-    if (!isLightboxHash()) return;
-    lockScroll();
-    const btn = document.querySelector(location.hash + ' ' + CLOSE_SELECTOR);
-    if (btn) btn.focus({ preventScroll: true });
-  }
-
-  document.querySelectorAll(LB_SELECTOR).forEach(function (lb) {
-    lb.addEventListener('click', function (e) {
-      if (e.target === lb) {
-        e.preventDefault();
-        clearHashWithoutJump();
-      }
-    });
-
-    const img = lb.querySelector('img');
-    if (img) img.addEventListener('click', function (e) { e.stopPropagation(); });
-
-    const btn = lb.querySelector(CLOSE_SELECTOR);
-    if (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        clearHashWithoutJump();
-      });
-    }
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && isLightboxHash()) {
-      clearHashWithoutJump();
-    }
-  });
-
-  window.addEventListener('hashchange', function () {
-    if (isLightboxHash()) onOpenFromHash();
-    else unlockScroll();
-  });
-
-  onOpenFromHash();
-})();
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGK76DBC8H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VGK76DBC8H');
-</script>
