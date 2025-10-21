@@ -147,12 +147,14 @@
     <p class="meta">Bold color, layered textures, CTA variants.</p>
   </div>
 
-  <!-- Pod Pro -->
-  <div class="card">
-    <a href="#lb-pod"><img class="logo" src="/assets/thepodpro.png" alt="The Pod Pro logo"></a>
-    <h3>The Pod Pro — Logo</h3>
-    <p class="meta">Podcast identity; layered glow & depth.</p>
-  </div>
+ <!-- Pod Pro -->
+<div class="card">
+  <a href="#lb-pod" class="logo-tile">
+    <img class="logo logo-zoom" src="/assets/thepodpro.png" alt="The Pod Pro logo">
+  </a>
+  <h3>The Pod Pro — Logo</h3>
+  <p class="meta">Podcast identity; layered glow & depth.</p>
+</div>
 
 <!-- AE - YouTube Thumbnail -->
   <div class="card">
