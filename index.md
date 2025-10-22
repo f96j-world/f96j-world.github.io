@@ -26,6 +26,29 @@
 
 <div class="grid">
 
+<!-- ===== Football Creative: Story + Feed (Joint Project) ===== -->
+<div class="card card--double">
+  <h3>Football Creative — Story & Feed</h3>
+  <p class="meta">
+    Placement-ready ad set for a match ball. Story (9:16) graded first, then adapted to Feed (4:5) with directional light sweep and type micro-shadow for legibility.
+  </p>
+
+  <div class="creative-pair">
+    <a href="#lb-footy-story" class="pair-item">
+      <img src="/assets/FootballCreative_StoryVersion.jpg" alt="Story ad (9:16) — Poise. Power. Precision.">
+      <span class="pair-caption">Story • 1080×1920</span>
+    </a>
+
+    <a href="#lb-footy-feed" class="pair-item">
+      <img src="/assets/FootballCreative_FeedVersion.jpg" alt="Feed ad (4:5) — Poise. Power. Precision.">
+      <span class="pair-caption">Feed • 1080×1350</span>
+    </a>
+  </div>
+
+  <p class="project-meta">Tools: Photoshop • Composition • Ad Design • Color Grading</p>
+</div>
+
+
   <!-- 1 -->
   <div class="card">
     <div class="video">
