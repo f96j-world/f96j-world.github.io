@@ -210,6 +210,18 @@
   <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
 </div>
 
+<!-- Lightboxes: Football Creative -->
+<div id="lb-footy-story" class="lightbox" role="dialog" aria-modal="true" aria-label="Story ad full">
+  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-footy-story">×</button>
+  <img src="/assets/FootballCreative_StoryVersion.jpg" alt="Story ad (9:16) — full size">
+</div>
+
+<div id="lb-footy-feed" class="lightbox" role="dialog" aria-modal="true" aria-label="Feed ad full">
+  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-footy-feed">×</button>
+  <img src="/assets/FootballCreative_FeedVersion.jpg" alt="Feed ad (4:5) — full size">
+</div>
+
+
 ---
 
 ## 📄 CV & Background
