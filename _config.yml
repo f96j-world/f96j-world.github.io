@@ -1,4 +1,7 @@
-title: Overview
+title: "Filip Janev"
+url: "https://f96j-world.github.io"
+markdown: kramdown
+
 description: Portfolio & Work (Creative or otherwise)
 # Option A (current): jekyll-theme-minimal
 theme: jekyll-theme-cayman
