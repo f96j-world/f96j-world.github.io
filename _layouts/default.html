@@ -90,5 +90,35 @@
   </div>
 </div>
 
+  <!-- Welcome Modal (first-time visitors) -->
+<div id="welcome-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="welcome-title" aria-modal="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__content" role="document">
+    <button class="modal__close" aria-label="Close" data-close>×</button>
+
+    <div class="modal__top">
+      <h2 id="welcome-title">Hey — I’m Filip.</h2>
+      <p class="modal__tagline">Creative Editor & Junior Media Buyer. Want a 30-sec taste?</p>
+    </div>
+
+    <div class="modal__video">
+      <video id="welcomeVideo" controls preload="metadata" poster="/assets/posters/yt-intro.jpg">
+        <source src="/assets/yt-intro.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="modal__actions">
+      <button class="btn" id="welcomeWatch">Watch reel</button>
+      <button class="btn" data-close>Browse portfolio</button>
+    </div>
+
+    <div class="confetti" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!-- keep this AFTER the modal -->
+<script src="/assets/site.js"></script>
+
+
 </body>
 </html>
