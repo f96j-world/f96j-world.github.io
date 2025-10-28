@@ -29,7 +29,7 @@ title: Home
 
 ## 🎬 Video Projects
 
-<div class="grid">
+<div class="grid reveal">
 
   <!-- 1 -->
   <div class="card">
@@ -148,7 +148,7 @@ title: Home
 ---
 
 ## 🎨 Design & Logos
-<div class="grid">
+<div class="grid reveal">
 
 <!-- ===== Football Creative: Story + Feed (Joint Project) ===== -->
 <div class="card card--double">
@@ -349,12 +349,3 @@ Meta Business Suite · Canva · Various SEO tools
   }
 })();
 </script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGK76DBC8H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VGK76DBC8H');
-</script> 
