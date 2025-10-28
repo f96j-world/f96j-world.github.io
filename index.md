@@ -19,10 +19,10 @@ title: Home
 ---
 
 ## Services
-- **Video Editing & Motion Graphics** (Premiere Pro, After Effects)
+- **Photo/Video Editing & Motion Graphics** (Premiere Pro, After Effects)
 - **Color & Sound Correction** (grading, cleanup, balancing)
 - **Media Buying & Ads Setup** (Meta Ads Manager – campaigns, ad-set uploads, optimizations)
-- **Design Basics** (thumbnails, social visuals)
+- **Design Basics** (Photoshop, Illustrator, Canva, thumbnails, social visuals)
 - **Tech Support/Data Analyst** (WordPress, SEO, content editing, Animoto)
 
 ---
