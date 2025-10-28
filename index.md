@@ -125,6 +125,19 @@
     <p class="meta">Short introduction, with a mix of footage and screen FX.</p>
   </div>
 
+  <!-- 10 AirPods Pro — Product Reel (Vertical) -->
+<div class="card card--product card--vertical">
+  <div class="video video--vertical">
+    <video controls controlsList="nodownload" preload="metadata" playsinline loading="lazy"
+           poster="/assets/posters/airpodspro-thumbnail.png">
+      <source src="/assets/airpodspro-product-reel.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h3>AirPods Pro — Product Reel</h3>
+  <p class="meta">Vertical showcase highlighting clean motion, lighting control, and ad-like product framing. Tagline: “Built for Every Beat.”</p>
+</div>
+
+
 </div>
 
 ---
