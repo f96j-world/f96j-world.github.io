@@ -243,3 +243,72 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
   }
 }
 
+/* ========= Global shell ========= */
+.site-inner{ max-width:1000px; margin:0 auto; padding: 0 20px; }
+
+/* Header/Nav (animated Blaugrana) */
+.site-banner{
+  position: sticky; top:0; z-index: 50;
+  background: linear-gradient(90deg, var(--blue), var(--garnet));
+  background-size: 200% 200%;
+  animation: headerShift 12s ease-in-out infinite;
+  color:#fff;
+}
+@keyframes headerShift{
+  0%{background-position: 0% 50%}
+  50%{background-position: 100% 50%}
+  100%{background-position: 0% 50%}
+}
+.site-banner .site-inner{
+  display:flex; align-items:center; gap:16px; padding:12px 20px;
+}
+.brand{ color:#fff; font-weight:800; text-decoration:none; font-size:1.1rem; letter-spacing:.2px }
+.nav{ margin-left:auto; display:flex; gap:12px; flex-wrap:wrap }
+.nav__link{
+  color:#fff; text-decoration:none; padding:6px 10px; border-radius:8px; font-weight:700; opacity:.9;
+}
+.nav__link:hover{ background: rgba(255,255,255,.12); opacity:1 }
+.nav__link.is-active{ background: rgba(255,255,255,.18) }
+.theme-toggle{
+  margin-left:8px; border:1px solid rgba(255,255,255,.7); color:#fff; background:transparent;
+  border-radius:8px; padding:6px 10px; cursor:pointer; font-size:14px;
+}
+
+/* Page wrapper spacing */
+.page{ padding: 24px 0 40px; }
+
+/* Section divider (tech accent) */
+hr.section{
+  border:0; height:10px; margin:30px 0 18px;
+  background:
+    linear-gradient(90deg, rgba(0,77,152,.15), rgba(165,0,68,.15)),
+    linear-gradient(#fff,#fff);
+  border-radius: 999px;
+}
+
+/* Card hover overlay (subtle) */
+.card{ position: relative; overflow: hidden; }
+.card::after{
+  content:""; position:absolute; inset:12px; border-radius:10px;
+  background: rgba(0,0,0,0); transition: background .18s ease;
+  pointer-events:none;
+}
+.card:hover::after{ background: rgba(0,0,0,.04) }
+
+/* Scroll-reveal */
+.reveal{ opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease }
+.reveal--in{ opacity:1; transform: none }
+
+/* Dark theme */
+:root { --bg-dark: #0f1422; --ink-dark: #e6e8ef; }
+.theme-dark body{
+  color: var(--ink-dark);
+  background:
+    linear-gradient(135deg, rgba(0,77,152,.12), rgba(165,0,68,.12)),
+    var(--bg-dark);
+}
+.theme-dark .card{ background:#0f172a; border-color:#20263b; }
+.theme-dark .card .meta{ color:#a8b0c2 }
+.theme-dark .btn{ border-color:#7aa3ff; color:#7aa3ff; background:transparent }
+.theme-dark .btn:hover{ background:#7aa3ff; color:#0e1220 }
+.theme-dark .site-footer{ color:#aab3c9 }
