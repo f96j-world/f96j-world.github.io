@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 <link rel="stylesheet" href="/assets/style.css">
 
 <p align="center"><img src="/assets/headshot.jpg" alt="Filip Janev headshot" class="headshot"></p>
