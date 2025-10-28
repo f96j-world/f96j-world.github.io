@@ -312,3 +312,27 @@ hr.section{
 .theme-dark .btn{ border-color:#7aa3ff; color:#7aa3ff; background:transparent }
 .theme-dark .btn:hover{ background:#7aa3ff; color:#0e1220 }
 .theme-dark .site-footer{ color:#aab3c9 }
+
+/* ===== Visual polish: spacing & hover depth ===== */
+section + section { margin-top: 3rem; }
+
+/* Add gentle card lift on hover */
+.card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+/* Tighter heading spacing */
+h2, h3 { margin-top: 1.2rem; margin-bottom: .4rem; }
+
+/* Button hover animation */
+.btn {
+  transition: all .25s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,77,152,.25);
+}
