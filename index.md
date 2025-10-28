@@ -240,22 +240,6 @@ title: Home
 
 ---
 
-## 📄 CV & Background
-<img src="/assets/cv-sneak.jpg" alt="CV preview" style="max-width:100%; border:1px solid #e1e4eb; border-radius:8px;">
-<p><a class="btn" href="/assets/FJ-CV.pdf" target="_blank">Download Full CV</a></p>
-
----
-
-## 📊 Upwork History
-<img src="/assets/upwork-history.jpg" alt="Upwork history screenshot" style="max-width:100%; border:1px solid #e1e4eb; border-radius:8px;">
-<p><a class="btn" href="https://www.upwork.com/freelancers/~016c8e482f2485cc4b" target="_blank">View Full Upwork Profile</a></p>
-
----
-
-## Tools
-Premiere Pro · After Effects · Photoshop · Illustrator · Audition · Excel/Sheets · Animoto · WordPress ·
-Meta Business Suite · Canva · Various SEO tools
-
 <!-- ✅ FINAL LIGHTBOX SCRIPT (no inline display edits; breaks :target cleanly) -->
 <script type="text/javascript">
 (function() {
