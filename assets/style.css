@@ -210,3 +210,36 @@ a{color:var(--blue)} a:hover{color:var(--garnet)}
 @media (max-width: 768px){
   .creative-pair{ grid-template-columns: 1fr; }
 }
+
+/* === Vertical product reel support === */
+.video--vertical {
+  padding-top: 177.78%; /* 9:16 aspect ratio */
+  background: linear-gradient(135deg, rgba(0,77,152,.1), rgba(165,0,68,.1));
+  border-radius: 10px;
+  overflow: hidden;
+}
+.video--vertical video {
+  object-fit: cover;
+}
+
+/* === Product reel polish === */
+.card--product .video {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card--product:hover .video {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.15);
+}
+
+/* === Optional light border for bright thumbnails === */
+.card--vertical .video {
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* === Mobile tweaks === */
+@media (max-width: 640px) {
+  .video--vertical {
+    padding-top: 160%; /* slightly tighter on mobile */
+  }
+}
+
