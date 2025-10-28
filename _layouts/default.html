@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }} · {% endif %}Filip Janev — Creative Editor & Junior Media Buyer</title>
+  <meta name="description" content="I create, polish, and launch content that performs. Browse my video edits, design work, CV and Upwork profile.">
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Filip Janev — Creative Editor & Junior Media Buyer">
+  <meta property="og:description" content="I create, polish, and launch content that performs.">
+  <meta property="og:image" content="{{ '/assets/headshot.jpg' | relative_url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (optional; add /assets/favicon.png if you have it) -->
+  <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Sticky animated Blaugrana header + nav -->
+  <header class="site-banner">
+    <div class="site-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">Filip Janev</a>
+
+      <nav class="nav">
+        <a class="nav__link {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        <a class="nav__link {% if page.url contains '/cv' %}is-active{% endif %}" href="{{ '/cv' | relative_url }}">CV</a>
+        <a class="nav__link {% if page.url contains '/upwork' %}is-active{% endif %}" href="{{ '/upwork' | relative_url }}">Upwork</a>
+        <a class="nav__link {% if page.url contains '/contact' %}is-active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="site-inner">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-inner">
+      <small>© {{ "now" | date: "%Y" }} Filip Janev • Built with GitHub Pages</small>
+    </div>
+  </footer>
+
+  <!-- Site JS (dark mode + reveal) -->
+  <script src="{{ '/assets/site.js' | relative_url }}"></script>
+
+  <!-- Google Analytics (your GA4 ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGK76DBC8H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-VGK76DBC8H');
+  </script>
+</body>
+</html>
