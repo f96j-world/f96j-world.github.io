@@ -447,3 +447,12 @@ img.headshot{
 :root{ --nav-h: 70px; }
 @media (max-width:600px){ :root{ --nav-h: 86px; } }
 html{ scroll-padding-top: var(--nav-h); }
+
+/* --- TEMP: hide any older/legacy header bars --- */
+.page-header,
+.site-header,
+.header,
+.project-name,
+.legacy-nav {
+  display: none !important;
+}
