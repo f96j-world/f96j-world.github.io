@@ -148,94 +148,67 @@ title: Home
 ---
 
 ## 🎨 Design & Logos
-<div class="grid reveal">
 
-<!-- ===== Football Creative: Story + Feed (Joint Project) ===== -->
-<div class="card card--double">
-  <h3>Football Creative — Story & Feed</h3>
-  <p class="meta">
-    Placement-ready ad set for a match ball. Story (9:16) graded first, then adapted to Feed (4:5) with directional light sweep and type micro-shadow for legibility.
-  </p>
+<!-- Masonry layout -->
+<div class="masonry">
 
-  <div class="creative-pair">
-    <a href="#lb-footy-story" class="pair-item">
-      <img src="/assets/FootballCreative_StoryVersion.jpg" alt="Story ad (9:16) — Poise. Power. Precision.">
-      <span class="pair-caption">Story • 1080×1920</span>
-    </a>
-
-    <a href="#lb-footy-feed" class="pair-item">
-      <img src="/assets/FootballCreative_FeedVersion.jpg" alt="Feed ad (4:5) — Poise. Power. Precision.">
-      <span class="pair-caption">Feed • 1080×1350</span>
-    </a>
-  </div>
-
-  <p class="project-meta">Tools: Photoshop • Composition • Ad Design • Color Grading</p>
-</div>
   <!-- Mars -->
-  <div class="card">
-    <a href="#lb-mars"><img src="/assets/mars-with-caption.jpg" alt="Mars Composite"></a>
-    <h3>Mars Composite – With Caption</h3>
-    <p class="meta">Photo manipulation & sky replacement.</p>
-  </div>
+  <figure class="tile">
+    <a href="#lb-mars">
+      <img class="thumb" src="/assets/mars-with-caption.jpg" alt="Mars Composite — With Caption">
+    </a>
+    <figcaption>
+      <h3>Mars Composite — With Caption</h3>
+      <p class="meta">Photo manipulation & sky replacement.</p>
+    </figcaption>
+  </figure>
 
   <!-- Summer Sale -->
-  <div class="card">
-    <a href="#lb-sale"><img src="/assets/summer-sale.jpg" alt="Summer Sale static banner"></a>
-    <h3>"Summer Sale" Static Banner</h3>
-    <p class="meta">Bold color, layered textures, CTA variants.</p>
-  </div>
+  <figure class="tile">
+    <a href="#lb-sale">
+      <img class="thumb" src="/assets/summer-sale.jpg" alt="“Summer Sale” Static Banner">
+    </a>
+    <figcaption>
+      <h3>“Summer Sale” Static Banner</h3>
+      <p class="meta">Bold color, layered textures, CTA variants.</p>
+    </figcaption>
+  </figure>
 
   <!-- Pod Pro -->
-  <div class="card">
-    <a href="#lb-pod" class="logo-tile">
-      <img class="logo logo-zoom" src="/assets/thepodpro.png" alt="The Pod Pro logo">
+  <figure class="tile">
+    <a href="#lb-pod">
+      <img class="thumb" src="/assets/thepodpro.png" alt="The Pod Pro — Logo">
     </a>
-    <h3>The Pod Pro – Logo</h3>
-    <p class="meta">Podcast identity; layered glow & depth.</p>
-  </div>
+    <figcaption>
+      <h3>The Pod Pro — Logo</h3>
+      <p class="meta">Podcast identity; layered glow & depth.</p>
+    </figcaption>
+  </figure>
 
-  <!-- AE - YouTube Thumbnail -->
-  <div class="card">
-    <a href="#lb-thumbnail">
-      <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
-    </a>
-    <h3>AE - YouTube Thumbnail</h3>
-    <p class="meta">A cinematic YouTube thumbnail created in Adobe Photoshop, designed to capture the humor and exhaustion of learning SOMETHING.</p>
-  </div>
+  <!-- 👉 Add more tiles by duplicating the <figure> pattern above.
+       Use your actual filenames in /assets/. -->
 
 </div>
 
-<!-- Lightboxes -->
-<div id="lb-mars" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-mars">×</button>
-  <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full">
+<!-- Lightboxes (outside masonry) -->
+<div id="lb-mars" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/mars-with-caption.jpg" alt="Mars Composite — Full view">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
-<div id="lb-sale" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-sale">×</button>
-  <img src="/assets/summer-sale.jpg" alt="Summer Sale Full">
+<div id="lb-sale" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/summer-sale.jpg" alt="Summer Sale — Full view">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
-<div id="lb-pod" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-pod">×</button>
-  <img src="/assets/thepodpro.png" alt="The Pod Pro Full">
+<div id="lb-pod" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/thepodpro.png" alt="The Pod Pro — Full view">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
-<div id="lb-thumbnail" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-thumbnail">×</button>
-  <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE-YouTube Thumbnail">
-</div>
-
-<!-- Lightboxes: Football Creative -->
-<div id="lb-footy-story" class="lightbox" role="dialog" aria-modal="true" aria-label="Story ad full">
-  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-footy-story">×</button>
-  <img src="/assets/FootballCreative_StoryVersion.jpg" alt="Story ad (9:16) — full size">
-</div>
-
-<div id="lb-footy-feed" class="lightbox" role="dialog" aria-modal="true" aria-label="Feed ad full">
-  <button class="lightbox-close" type="button" aria-label="Close" data-close="lb-footy-feed">×</button>
-  <img src="/assets/FootballCreative_FeedVersion.jpg" alt="Feed ad (4:5) — full size">
-</div>
 
 
 ---
