@@ -5,6 +5,26 @@ title: Home
 
 <link rel="stylesheet" href="/assets/style.css">
 
+<!-- NAVBAR: paste at the very top of index.md -->
+<header class="navbar">
+  <div class="navbar-brand">
+    <a href="/" class="brand-link">Portfolio</a>
+  </div>
+
+  <!-- hamburger (mobile only) -->
+  <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+
+  <nav class="nav-links">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/cv">CV</a>
+    <a class="nav-link" href="/upwork">Upwork</a>
+    <a class="nav-link" href="/contact">Contact</a>
+  </nav>
+
+  <!-- your theme toggle stays as-is; just point to your existing handler -->
+  <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+</header>
+
 <p align="center"><img src="/assets/headshot.jpg" alt="Filip Janev headshot" class="headshot"></p>
 
 # Filip Janev
