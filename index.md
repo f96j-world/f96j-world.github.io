@@ -149,10 +149,9 @@ title: Home
 
 ## 🎨 Design & Logos
 
-<!-- Masonry layout -->
 <div class="masonry">
 
-  <!-- Mars -->
+  <!-- 1) Mars -->
   <figure class="tile">
     <a href="#lb-mars">
       <img class="thumb" src="/assets/mars-with-caption.jpg" alt="Mars Composite — With Caption">
@@ -163,7 +162,7 @@ title: Home
     </figcaption>
   </figure>
 
-  <!-- Summer Sale -->
+  <!-- 2) Summer Sale -->
   <figure class="tile">
     <a href="#lb-sale">
       <img class="thumb" src="/assets/summer-sale.jpg" alt="“Summer Sale” Static Banner">
@@ -174,7 +173,7 @@ title: Home
     </figcaption>
   </figure>
 
-  <!-- Pod Pro -->
+  <!-- 3) The Pod Pro -->
   <figure class="tile">
     <a href="#lb-pod">
       <img class="thumb" src="/assets/thepodpro.png" alt="The Pod Pro — Logo">
@@ -185,10 +184,82 @@ title: Home
     </figcaption>
   </figure>
 
-  <!-- 👉 Add more tiles by duplicating the <figure> pattern above.
-       Use your actual filenames in /assets/. -->
+  <!-- ===== ADD MORE ITEMS (safe templates) =====
+  Duplicate one of the blocks below, change the id, src, title, and meta.
+  Make sure the image actually exists in /assets/ to avoid 404s.
+  
+  <figure class="tile">
+    <a href="#lb-football-feed">
+      <img class="thumb" src="/assets/football-feed.jpg" alt="Football Graphic — Feed">
+    </a>
+    <figcaption>
+      <h3>Football Graphic — Feed</h3>
+      <p class="meta">Clean type, club palette, 1080×1350.</p>
+    </figcaption>
+  </figure>
+
+  <figure class="tile">
+    <a href="#lb-football-story">
+      <img class="thumb" src="/assets/football-story.jpg" alt="Football Graphic — Story">
+    </a>
+    <figcaption>
+      <h3>Football Graphic — Story</h3>
+      <p class="meta">Vertical export, 1080×1920.</p>
+    </figcaption>
+  </figure>
+
+  <figure class="tile">
+    <a href="#lb-ae-thumb">
+      <img class="thumb" src="/assets/ae-youtube-thumbnail.jpg" alt="AE — YouTube Thumbnail">
+    </a>
+    <figcaption>
+      <h3>AE — YouTube Thumbnail</h3>
+      <p class="meta">Layered comp, glow accents, sharp readability.</p>
+    </figcaption>
+  </figure>
+  ===== END ADD MORE ITEMS ===== -->
 
 </div>
+
+<!-- Lightboxes -->
+<div id="lb-mars" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/mars-with-caption.jpg" alt="Mars Composite — Full view">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
+</div>
+
+<div id="lb-sale" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/summer-sale.jpg" alt="Summer Sale — Full view">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
+</div>
+
+<div id="lb-pod" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/thepodpro.png" alt="The Pod Pro — Full view">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
+</div>
+
+<!-- ===== MATCHING LIGHTBOX TEMPLATES FOR NEW ITEMS =====
+<div id="lb-football-feed" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/football-feed.jpg" alt="Football Graphic — Feed (full)">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
+</div>
+
+<div id="lb-football-story" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/football-story.jpg" alt="Football Graphic — Story (full)">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
+</div>
+
+<div id="lb-ae-thumb" class="lightbox" aria-modal="true" role="dialog">
+  <a class="lightbox__backdrop" href="#"></a>
+  <img src="/assets/ae-youtube-thumbnail.jpg" alt="AE — YouTube Thumbnail (full)">
+  <a class="lightbox__close" href="#" aria-label="Close">×</a>
+</div>
+===== END MATCHING LIGHTBOX TEMPLATES ===== -->
+
 
 <!-- Lightboxes (outside masonry) -->
 <div id="lb-mars" class="lightbox" aria-modal="true" role="dialog">
