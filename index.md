@@ -187,7 +187,7 @@ title: Home
   <!-- 4) Football Graphic — Feed -->
   <figure class="tile">
     <a href="#lb-football-feed">
-      <img class="thumb" src="/assets/football-feed.jpg" alt="Football Graphic — Feed">
+      <img class="thumb" src="/assets/FootballCreative_FeedVersion.jpg" alt="Football Graphic — Feed">
     </a>
     <figcaption>
       <h3>Football Graphic — Feed</h3>
@@ -198,7 +198,7 @@ title: Home
   <!-- 5) Football Graphic — Story -->
   <figure class="tile">
     <a href="#lb-football-story">
-      <img class="thumb" src="/assets/football-story.jpg" alt="Football Graphic — Story">
+      <img class="thumb" src="/assets/FootballCreative_StoryVersion.jpg.jpg" alt="Football Graphic — Story">
     </a>
     <figcaption>
       <h3>Football Graphic — Story</h3>
@@ -209,7 +209,7 @@ title: Home
   <!-- 6) AE — YouTube Thumbnail -->
   <figure class="tile">
     <a href="#lb-ae-thumb">
-      <img class="thumb" src="/assets/ae-youtube-thumbnail.jpg" alt="AE — YouTube Thumbnail">
+      <img class="thumb" src="/assets/Filip-AE-thumbnail.jpg" alt="AE — YouTube Thumbnail">
     </a>
     <figcaption>
       <h3>AE — YouTube Thumbnail</h3>
@@ -220,7 +220,7 @@ title: Home
   <!-- 7) Coffee Explainer Still -->
   <figure class="tile">
     <a href="#lb-coffee">
-      <img class="thumb" src="/assets/coffee-explainer.jpg" alt="Coffee Explainer — Still">
+      <img class="thumb" src="/assets/posters/coffee-explainer.jpg" alt="Coffee Explainer — Still">
     </a>
     <figcaption>
       <h3>Coffee Explainer — Still</h3>
