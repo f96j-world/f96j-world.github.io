@@ -151,33 +151,27 @@ title: Home
 
 <div class="masonry">
 
-  <!-- 1) Mars Composite -->
+  <!-- 1) Mars -->
   <figure class="tile">
-    <a href="#lb-mars">
-      <img class="thumb" src="/assets/mars-with-caption.jpg" alt="Mars Composite — With Caption">
-    </a>
+    <a href="#lb-mars"><img class="thumb" src="/assets/mars-with-caption.jpg" alt="Mars Composite — With Caption"></a>
     <figcaption>
       <h3>Mars Composite — With Caption</h3>
       <p class="meta">Photo manipulation & sky replacement.</p>
     </figcaption>
   </figure>
 
-  <!-- 2) Summer Sale Static Banner -->
+  <!-- 2) Summer Sale -->
   <figure class="tile">
-    <a href="#lb-sale">
-      <img class="thumb" src="/assets/summer-sale.jpg" alt="“Summer Sale” Static Banner">
-    </a>
+    <a href="#lb-sale"><img class="thumb" src="/assets/summer-sale.jpg" alt="“Summer Sale” Static Banner"></a>
     <figcaption>
       <h3>“Summer Sale” Static Banner</h3>
       <p class="meta">Bold color, layered textures, CTA variants.</p>
     </figcaption>
   </figure>
 
-  <!-- 3) The Pod Pro Logo -->
+  <!-- 3) The Pod Pro (logo tile uses its own sizing class) -->
   <figure class="tile">
-    <a href="#lb-pod">
-      <img class="thumb logo" src="/assets/thepodpro.png" alt="The Pod Pro — Logo">
-    </a>
+    <a href="#lb-pod"><img class="thumb logo" src="/assets/thepodpro.png" alt="The Pod Pro — Logo"></a>
     <figcaption>
       <h3>The Pod Pro — Logo</h3>
       <p class="meta">Podcast identity; layered glow & depth.</p>
@@ -186,9 +180,7 @@ title: Home
 
   <!-- 4) Football Graphic — Feed -->
   <figure class="tile">
-    <a href="#lb-football-feed">
-      <img class="thumb" src="/assets/FootballCreative_FeedVersion.jpg" alt="Football Graphic — Feed">
-    </a>
+    <a href="#lb-football-feed"><img class="thumb" src="/assets/FootballCreative_FeedVersion.jpg" alt="Football Graphic — Feed"></a>
     <figcaption>
       <h3>Football Graphic — Feed</h3>
       <p class="meta">Bold typography and club palette for social feed.</p>
@@ -197,9 +189,7 @@ title: Home
 
   <!-- 5) Football Graphic — Story -->
   <figure class="tile">
-    <a href="#lb-football-story">
-      <img class="thumb" src="/assets/FootballCreative_StoryVersion.jpg.jpg" alt="Football Graphic — Story">
-    </a>
+    <a href="#lb-football-story"><img class="thumb" src="/assets/FootballCreative_StoryVersion.jpg" alt="Football Graphic — Story"></a>
     <figcaption>
       <h3>Football Graphic — Story</h3>
       <p class="meta">Vertical export (1080×1920) for Instagram stories.</p>
@@ -208,20 +198,16 @@ title: Home
 
   <!-- 6) AE — YouTube Thumbnail -->
   <figure class="tile">
-    <a href="#lb-ae-thumb">
-      <img class="thumb" src="/assets/Filip-AE-thumbnail.jpg" alt="AE — YouTube Thumbnail">
-    </a>
+    <a href="#lb-ae-thumb"><img class="thumb" src="/assets/Filip-AE-thumbnail.jpg" alt="AE — YouTube Thumbnail"></a>
     <figcaption>
       <h3>AE — YouTube Thumbnail</h3>
       <p class="meta">After Effects + Photoshop layered thumbnail mockup.</p>
     </figcaption>
   </figure>
 
-  <!-- 7) Coffee Explainer Still -->
+  <!-- 7) Coffee Explainer — Still (only if /assets/coffee-explainer.jpg exists) -->
   <figure class="tile">
-    <a href="#lb-coffee">
-      <img class="thumb" src="/assets/posters/coffee-explainer.jpg" alt="Coffee Explainer — Still">
-    </a>
+    <a href="#lb-coffee"><img class="thumb" src="/assets/coffee-explainer.jpg" alt="Coffee Explainer — Still"></a>
     <figcaption>
       <h3>Coffee Explainer — Still</h3>
       <p class="meta">Static visual companion for motion version. Tagline: “Brew better, every morning.”</p>
@@ -230,46 +216,46 @@ title: Home
 
 </div>
 
-<!-- Lightboxes -->
+<!-- Lightboxes (ids must match hrefs above) -->
 <div id="lb-mars" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/mars-with-caption.jpg" alt="Mars Composite Full View">
+  <img src="/assets/mars-with-caption.jpg" alt="Mars — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
 <div id="lb-sale" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/summer-sale.jpg" alt="Summer Sale Full View">
+  <img src="/assets/summer-sale.jpg" alt="Summer Sale — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
 <div id="lb-pod" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/thepodpro.png" alt="The Pod Pro Full View">
+  <img src="/assets/thepodpro.png" alt="The Pod Pro — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
 <div id="lb-football-feed" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/football-feed.jpg" alt="Football Graphic Feed Full View">
+  <img src="/assets/FootballCreative_FeedVersion.jpg" alt="Football Graphic Feed — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
 <div id="lb-football-story" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/football-story.jpg" alt="Football Graphic Story Full View">
+  <img src="/assets/FootballCreative_StoryVersion.jpg" alt="Football Graphic Story — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
 <div id="lb-ae-thumb" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/ae-youtube-thumbnail.jpg" alt="AE Thumbnail Full View">
+  <img src="/assets/Filip-AE-thumbnail.jpg" alt="AE YouTube Thumbnail — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
 <div id="lb-coffee" class="lightbox" aria-modal="true" role="dialog">
   <a class="lightbox__backdrop" href="#"></a>
-  <img src="/assets/coffee-explainer.jpg" alt="Coffee Explainer Still Full View">
+  <img src="/assets/posters/coffee-explainer.jpg" alt="Coffee Explainer — full view">
   <a class="lightbox__close" href="#" aria-label="Close">×</a>
 </div>
 
