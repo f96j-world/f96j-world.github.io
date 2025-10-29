@@ -139,3 +139,31 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
   addEventListener('scroll', onScroll, {passive:true});
 })();
+
+// ==== Universal theme toggle (works for any of these selectors) ====
+(function () {
+  const togglers = document.querySelectorAll('#theme-toggle, [data-theme-toggle], .toggle-theme');
+  if (!togglers.length) return;
+
+  const root = document.documentElement;
+  const KEY  = 'theme';
+
+  // Use existing preference or default to light
+  const saved = localStorage.getItem(KEY);
+  setTheme(saved === 'dark' ? 'dark' : 'light');
+
+  // Click handlers for every toggle button/icon you render
+  togglers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      setTheme(next);
+    });
+  });
+
+  function setTheme(mode) {
+    root.dataset.theme = mode;                  // <html data-theme="dark|light">
+    localStorage.setItem(KEY, mode);
+    // Optional: swap icon glyphs
+    togglers.forEach(btn => btn.textContent = mode === 'dark' ? '☀️' : '🌙');
+  }
+})();
