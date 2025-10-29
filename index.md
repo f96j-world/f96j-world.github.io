@@ -207,7 +207,7 @@ title: Home
 
   <!-- 7) Coffee Explainer — Still (only if /assets/coffee-explainer.jpg exists) -->
   <figure class="tile">
-    <a href="#lb-coffee"><img class="thumb" src="/assets/coffee-explainer.jpg" alt="Coffee Explainer — Still"></a>
+    <a href="#lb-coffee"><img class="thumb" src="/assets/posters/coffee-explainer.jpg" alt="Coffee Explainer — Still"></a>
     <figcaption>
       <h3>Coffee Explainer — Still</h3>
       <p class="meta">Static visual companion for motion version. Tagline: “Brew better, every morning.”</p>
