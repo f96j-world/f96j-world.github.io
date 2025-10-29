@@ -247,3 +247,28 @@ img.headshot{
 .lightbox img{max-width:92vw;max-height:92vh;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:10px}
 .lightbox__backdrop{position:absolute;inset:0;display:block}
 .lightbox__close{position:absolute;top:18px;right:22px;color:#fff;text-decoration:none;font-size:36px;line-height:1}
+
+/* --- Uniform thumbnail frame ------------------------------------------- */
+.tile .thumb{
+  width: 100%;
+  aspect-ratio: 16 / 9;     /* consistent tile look */
+  height: auto;
+  object-fit: cover;         /* fills the frame (light crop when needed) */
+  object-position: center;
+  display: block;
+  border-bottom: 1px solid #eef1f6;
+}
+
+/* Logo tile: show bigger, centered, no crop */
+.tile .thumb.logo{
+  aspect-ratio: 16 / 9;
+  object-fit: contain;       /* no cropping for the logo */
+  background: #fff;
+  padding: 14px;             /* gives the logo breathing room */
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.10));
+  transition: transform .25s ease, filter .25s ease;
+}
+.tile .thumb.logo:hover{
+  transform: scale(1.06);
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.16));
+}
