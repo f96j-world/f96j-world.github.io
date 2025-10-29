@@ -1,56 +1,49 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ page.title }} · {% endif %}Filip Janev — Creative Editor & Junior Media Buyer</title>
-  <meta name="description" content="I create, polish, and launch content that performs. Browse my video edits, design work, CV and Upwork profile.">
-
-  <!-- Social preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Filip Janev — Creative Editor & Junior Media Buyer">
-  <meta property="og:description" content="I create, polish, and launch content that performs.">
-  <meta property="og:image" content="{{ '/assets/headshot.jpg' | relative_url }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicon (optional; add /assets/favicon.png if you have it) -->
-  <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-
+  <title>{% if page.title %}{{ page.title }} · {% endif %}Filip Janev — Portfolio</title>
+  <meta name="description" content="Creative Editor & Junior Media Buyer — I create, polish, and launch content that performs.">
   <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
 
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+
+  <!-- Prevent flash: pre-apply saved or OS theme -->
+  <script>
+    (function(){
+      try {
+        var k='fj-theme', s=localStorage.getItem(k);
+        if(s==='dark') document.documentElement.classList.add('theme-dark');
+        if(!s){
+          var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if(d) document.documentElement.classList.add('theme-dark');
+        }
+      } catch(e){}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-
-  <!-- Sticky animated Blaugrana header + nav -->
   <header class="site-banner">
     <div class="site-inner">
       <a class="brand" href="{{ '/' | relative_url }}">Portfolio</a>
-
       <nav class="nav">
         <a class="nav__link {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
         <a class="nav__link {% if page.url contains '/cv' %}is-active{% endif %}" href="{{ '/cv' | relative_url }}">CV</a>
         <a class="nav__link {% if page.url contains '/upwork' %}is-active{% endif %}" href="{{ '/upwork' | relative_url }}">Upwork</a>
         <a class="nav__link {% if page.url contains '/contact' %}is-active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-  <span class="theme-toggle__icon">🌙</span>
-</button>
-
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"><span class="theme-toggle__icon">☀️</span></button>
+    </div>
   </header>
 
-  <main class="page">
-    <div class="site-inner">
-      {{ content }}
-    </div>
-  </main>
+  <main class="page"><div class="site-inner">{{ content }}</div></main>
 
   <footer class="site-footer">
     <div class="site-inner">
@@ -58,74 +51,6 @@
     </div>
   </footer>
 
-  <!-- Site JS (dark mode + reveal) -->
-  <script src="{{ '/assets/site.js' | relative_url }}"></script>
-
-  <!-- Google Analytics (your GA4 ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGK76DBC8H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-VGK76DBC8H');
-  </script>
-
-  <!-- Welcome Modal (first-time visitors) -->
-<div id="welcome-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="welcome-title" aria-modal="true">
-  <div class="modal__backdrop" data-close></div>
-  <div class="modal__content" role="document">
-    <button class="modal__close" aria-label="Close" data-close>×</button>
-
-    <div class="modal__top">
-      <h2 id="welcome-title">Hey — I’m Filip.</h2>
-      <p class="modal__tagline">Creative Editor & Junior Media Buyer. Want a 30-sec taste?</p>
-    </div>
-
-    <div class="modal__video">
-      <video id="welcomeVideo" controls preload="metadata" poster="/assets/posters/yt-intro.jpg">
-        <source src="/assets/yt-intro.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="modal__actions">
-      <button class="btn" id="welcomeWatch">Watch reel</button>
-      <button class="btn" data-close>Browse portfolio</button>
-    </div>
-
-    <!-- Confetti container -->
-    <div class="confetti" aria-hidden="true"></div>
-  </div>
-</div>
-
-  <!-- Welcome Modal (first-time visitors) -->
-<div id="welcome-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="welcome-title" aria-modal="true">
-  <div class="modal__backdrop" data-close></div>
-  <div class="modal__content" role="document">
-    <button class="modal__close" aria-label="Close" data-close>×</button>
-
-    <div class="modal__top">
-      <h2 id="welcome-title">Hey — I’m Filip.</h2>
-      <p class="modal__tagline">Creative Editor & Junior Media Buyer. Want a 30-sec taste?</p>
-    </div>
-
-    <div class="modal__video">
-      <video id="welcomeVideo" controls preload="metadata" poster="/assets/posters/yt-intro.jpg">
-        <source src="/assets/yt-intro.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="modal__actions">
-      <button class="btn" id="welcomeWatch">Watch reel</button>
-      <button class="btn" data-close>Browse portfolio</button>
-    </div>
-
-    <div class="confetti" aria-hidden="true"></div>
-  </div>
-</div>
-
-<!-- keep this AFTER the modal -->
-<script src="/assets/site.js"></script>
-
-
+  <script src="/assets/site.js"></script>
 </body>
 </html>
