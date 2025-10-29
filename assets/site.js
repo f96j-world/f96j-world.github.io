@@ -84,3 +84,15 @@
     if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
   });
 })();
+
+// Close lightbox on Esc or backdrop click
+(() => {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') location.hash = '';
+  });
+  document.querySelectorAll('.lightbox').forEach(lb => {
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb) location.hash = '';
+    });
+  });
+})();
