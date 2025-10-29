@@ -1,3 +1,45 @@
+// ===================== THEME TOGGLE =====================
+(() => {
+  const KEY = 'fj-theme'; // 'light' | 'dark'
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  const icon = btn ? btn.querySelector('.theme-toggle__icon') : null;
+
+  const apply = (mode) => {
+    if (mode === 'dark'){
+      root.classList.add('theme-dark');
+      if (icon) icon.textContent = '🌙';
+      localStorage.setItem(KEY, 'dark');
+    } else {
+      root.classList.remove('theme-dark');
+      if (icon) icon.textContent = '☀️';
+      localStorage.setItem(KEY, 'light');
+    }
+  };
+
+  // Initial: respect saved choice; otherwise respect OS
+  const saved = localStorage.getItem(KEY);
+  if (saved === 'dark' || saved === 'light'){
+    apply(saved);
+  } else {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    apply(prefersDark ? 'dark' : 'light');
+  }
+
+  // Toggle on click
+  btn && btn.addEventListener('click', () => {
+    const next = root.classList.contains('theme-dark') ? 'light' : 'dark';
+    apply(next);
+  });
+
+  // Optional: live-update if OS theme changes, but only if user hasn't chosen
+  if (!saved && window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      apply(e.matches ? 'dark' : 'light');
+    });
+  }
+})();
+
 // Dark mode toggle (saves preference)
 (() => {
   const key = 'fj-theme';
