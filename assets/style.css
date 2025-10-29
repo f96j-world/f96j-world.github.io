@@ -189,3 +189,61 @@ img.headshot{
   from{opacity:0;transform:translateY(22px)}
   to{opacity:1;transform:translateY(0)}
 }
+
+/* Masonry-like responsive grid */
+.masonry{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:22px;
+}
+
+/* Tile base */
+.tile{
+  background:#fff;
+  border:1px solid #e9ecf1;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.06);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .25s ease, box-shadow .25s ease, opacity .6s ease, translate .6s ease;
+}
+
+/* Fade-in on scroll */
+.tile{opacity:0; translate:0 14px;}
+.tile.visible{opacity:1; translate:0 0;}
+
+/* Thumbnails: aligned height */
+.tile .thumb{
+  display:block;
+  width:100%;
+  height:220px;              /* keeps cards visually aligned */
+  object-fit:cover;
+  border-bottom:1px solid #eef1f6;
+}
+
+/* Logo tile: larger, centered, non-stretched */
+.tile .thumb.logo{
+  height:auto;
+  max-width:220px;
+  margin:42px auto 18px;
+  object-fit:contain;
+  filter:drop-shadow(0 3px 8px rgba(0,0,0,.10));
+  transition:transform .25s ease, filter .25s ease;
+}
+.tile .thumb.logo:hover{transform:scale(1.06); filter:drop-shadow(0 5px 12px rgba(0,0,0,.14));}
+
+/* Text area */
+.tile figcaption{padding:14px 16px 18px;}
+.tile h3{margin:4px 0 6px; font-size:1.06rem; color:var(--garnet);}
+.tile .meta{margin:0; color:#5b6275;}
+
+/* Hover lift */
+.tile:hover{transform:translateY(-4px); box-shadow:0 10px 26px rgba(0,0,0,.10);}
+
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);}
+.lightbox:target{display:block;}
+.lightbox img{max-width:92vw;max-height:92vh;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:10px}
+.lightbox__backdrop{position:absolute;inset:0;display:block}
+.lightbox__close{position:absolute;top:18px;right:22px;color:#fff;text-decoration:none;font-size:36px;line-height:1}
