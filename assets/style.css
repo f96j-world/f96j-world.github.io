@@ -278,3 +278,81 @@ img.headshot{
   object-fit: contain;
   background: #fff;
 }
+
+/* ============================================= */
+/* NAVBAR RESPONSIVE FIX & REBALANCE             */
+/* ============================================= */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* centers all nav links */
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(90deg, var(--blue), var(--garnet));
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Logo/title on left, menu on right for wide screens */
+.navbar-brand {
+  font-weight: 700;
+  color: #fff;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+/* Menu links */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  font-weight: 600;
+}
+.navbar a:hover,
+.navbar a.active {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Toggle button (sun icon etc.) */
+.navbar .toggle-btn {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  width: 34px;
+  height: 34px;
+}
+
+/* ============================================= */
+/* MOBILE TWEAKS (center and evenly space items) */
+/* ============================================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: inline-block;
+    width: auto;
+    min-width: 120px;  /* keeps width consistent */
+    background: rgba(255,255,255,0.15);
+  }
+
+  .navbar-brand {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar .toggle-btn {
+    margin: 0 auto;
+  }
+}
