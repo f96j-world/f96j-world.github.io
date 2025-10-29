@@ -122,3 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
   window.requestAnimationFrame(() => setTimeout(burst, 600));
   localStorage.setItem(k, today);
 })();
+
+// Mobile hamburger toggle
+(function(){
+  const btn = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  btn.addEventListener('click', () => links.classList.toggle('is-open'));
+})();
+
+// Optional: add a small shadow when scrolled
+(function(){
+  const nav = document.querySelector('.navbar');
+  if(!nav) return;
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 4);
+  onScroll();
+  addEventListener('scroll', onScroll, {passive:true});
+})();
