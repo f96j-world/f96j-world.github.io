@@ -1,4 +1,4 @@
-/* ====== Blaugrana theme ====== */
+v/* ====== Blaugrana theme ====== */
 :root{
   --blue:#004D98;         /* Barça blue   */
   --garnet:#A50044;       /* Barça red    */
@@ -403,4 +403,92 @@ body.no-scroll { overflow: hidden; }
 }
 @keyframes fall{
   to { transform: translateY(120vh) rotate(240deg); opacity:.0; }
+}
+
+/* ===================== THEME VARIABLES ===================== */
+:root{
+  /* Light */
+  --bg: #f4f6fb;
+  --panel: #ffffff;
+  --ink: #1f2330;
+  --ink-soft:#5b6275;
+
+  /* Blaugrana accents */
+  --blue:#004D98;
+  --garnet:#A50044;
+  --gold:#EDBB00;
+
+  /* UI */
+  --line:#e9ecf1;
+  --shadow: 0 6px 18px rgba(0,0,0,.08);
+  --card-hover: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* Prefer dark by OS when no choice saved (JS will override if user chose) */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b1220;
+    --panel:#0f172a;
+    --ink:#e8ecf5;
+    --ink-soft:#a9b2c8;
+    --line:#24304a;
+    --shadow: 0 10px 28px rgba(0,0,0,.35);
+    --card-hover: 0 16px 36px rgba(0,0,0,.45);
+  }
+}
+
+/* Explicit dark theme (via class) always wins */
+.theme-dark{
+  --bg: #0b1220;
+  --panel:#0f172a;
+  --ink:#e8ecf5;
+  --ink-soft:#a9b2c8;
+  --line:#24304a;
+  --shadow: 0 10px 28px rgba(0,0,0,.35);
+  --card-hover: 0 16px 36px rgba(0,0,0,.45);
+}
+
+/* Page background (soft diagonal wash) */
+html,body{ background: var(--bg); }
+body{
+  background:
+    linear-gradient(135deg, rgba(0,77,152,.06), rgba(165,0,68,.06)),
+    var(--bg);
+  color: var(--ink);
+}
+
+/* Panels / cards / borders pick up variables */
+.card{ background:var(--panel); border:1px solid var(--line); box-shadow: var(--shadow); }
+.card:hover{ box-shadow: var(--card-hover); transform: translateY(-4px); }
+.card h3{ color: var(--garnet); }
+.card .meta{ color: var(--ink-soft); }
+
+.btn{ border:1px solid var(--blue); color:var(--blue); background:transparent; }
+.btn:hover{ background:var(--blue); color:#fff; }
+
+/* Header bar gradient gets a softer dark look */
+.page-header{
+  background: linear-gradient(90deg, var(--blue), var(--garnet)) !important;
+}
+.theme-dark .page-header{
+  background: linear-gradient(90deg, #0d1b36, #2b0e1f) !important; /* gentle in dark */
+}
+
+/* Video frame background */
+.video{ background:#000; border-radius:12px; overflow:hidden; }
+
+/* Theme toggle button */
+.theme-toggle{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:36px; height:36px; margin-left:.5rem;
+  border:1px solid var(--line); background:var(--panel); color:var(--ink);
+  border-radius:10px; cursor:pointer;
+  box-shadow: var(--shadow);
+}
+.theme-toggle:hover{ transform: translateY(-2px); box-shadow: var(--card-hover); }
+.theme-toggle__icon{ font-size:18px; line-height:1; }
+
+/* Smooth (but respectful) transitions */
+@media (prefers-reduced-motion: no-preference){
+  *{ transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
 }
