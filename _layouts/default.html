@@ -40,8 +40,10 @@
         <a class="nav__link {% if page.url contains '/contact' %}is-active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
       </nav>
 
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
-    </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <span class="theme-toggle__icon">🌙</span>
+</button>
+
   </header>
 
   <main class="page">
