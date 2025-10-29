@@ -88,3 +88,20 @@ body{
 @media (prefers-reduced-motion:no-preference){
   *{transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease;}
 }
+
+/* =================== Headshot styling =================== */
+img.headshot{
+  width:120px;               /* fixed size */
+  height:120px;
+  border-radius:50%;         /* circle */
+  object-fit:cover;          /* keep proportions */
+  display:block;
+  margin:20px auto 10px;     /* center + spacing */
+  border:3px solid var(--gold);
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.theme-dark img.headshot{
+  border-color:#1e2a44;      /* softer in dark mode */
+  box-shadow:0 4px 12px rgba(0,0,0,.35);
+}
