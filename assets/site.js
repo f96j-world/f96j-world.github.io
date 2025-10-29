@@ -96,3 +96,10 @@
     });
   });
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.2});
+  document.querySelectorAll('.tile').forEach(t => obs.observe(t));
+});
