@@ -272,3 +272,9 @@ img.headshot{
   transform: scale(1.06);
   filter: drop-shadow(0 6px 14px rgba(0,0,0,.16));
 }
+
+/* Optional “show everything” helper for one-off images */
+.tile .thumb.fit{
+  object-fit: contain;
+  background: #fff;
+}
