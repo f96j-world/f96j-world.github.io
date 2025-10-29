@@ -356,3 +356,16 @@ img.headshot{
     margin: 0 auto;
   }
 }
+
+/* ===== Sticky navbar ===== */
+:root{
+  /* tweak if your navbar height changes */
+  --nav-h: 64px;
+}
+
+/* keep space for iOS notch when sticky */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: calc(0.5rem + env(safe
