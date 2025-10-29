@@ -103,3 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {threshold: 0.2});
   document.querySelectorAll('.tile').forEach(t => obs.observe(t));
 });
+
+// Welcome confetti once per day
+(function() {
+  const k = 'confetti-seen-date';
+  const today = new Date().toISOString().slice(0,10);
+  if (localStorage.getItem(k) === today) return;
+
+  function burst() {
+    if (!window.confetti) return; // library not loaded yet
+    const defaults = { origin: { y: 0.6 } };
+
+    confetti({ ...defaults, particleCount: 90, spread: 70, scalar: 0.9 });
+    setTimeout(() => confetti({ ...defaults, particleCount: 60, spread: 100, startVelocity: 45 }), 180);
+  }
+
+  // fire after page settles a bit
+  window.requestAnimationFrame(() => setTimeout(burst, 600));
+  localStorage.setItem(k, today);
+})();
